@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .login-input {
+            width: 390px;
+            height: 42px;
+            float: left;
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 16px 11px;
+        }
+
+
+        .main {
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+            border-radius: 50px;
+            background: #e9d4f2;
+            box-shadow:  32px 32px 63px #c6b4ce,
+            -32px -32px 63px #fff4ff;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="main">
+
+    <h1>로그인</h1>
+    <div class="member">
+        <a href="#">가입 회원</a>
+    </div>
+    <div class="non_member">
+        <a href="#">비 회원 주문 조회</a>
+    </div>
+
+    <form>
+
+    <!-- 아이디 버튼 -->
+    <div class="login-input">
+        <input type="text" name="id" class="login-input__input" title="아이디 입력" placeholder="아이디" maxlength="32">
+    </div>
+
+    <!--비밀번호 버튼-->
+    <div class="login-input">
+        <input type="password" name="pw" class="login-input__input" title="비밀번호 입력" placeholder="비밀번호">
+    </div>
+
+
+        <button class="pushable">
+            <span class="front">로그인</span></button>
+    </form>
+
+</div>
+</body>
+</html>
