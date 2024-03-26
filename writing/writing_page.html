@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <title>글쓰기 화면</title>
     <style>
+        @font-face {
+            font-family: 'AppleSDGothicNeo';
+            font-weight: 600;
+            src: url("./font/AppleSDGothicNeoSB.woff2") format("woff2");
+        }
         body {
+            font-family: 'AppleSDGothicNeo';
             margin: 0;
             padding: 0;
         }
         .container {
-            width: 1900px; 
+            width: 1900px;
             margin: 0 auto;
             background-color: #f0f0f0;
         }
@@ -18,17 +24,20 @@
             margin: 0 auto;
             background-color: #fff;
         }
-        .first {
-            width: 700px;
-            height: 1000px;
+        .area1 {
+            width: 1000px;
+            height: 50px;
             background-color: cadetblue;
         }
+
     </style>
 </head>
 <body>
 <div class="container">
     <div class="content">
-        <div class="first"></div>
+        <div class="area1">
+            <hr>
+        </div>
     </div>
 </div>
 </body>
