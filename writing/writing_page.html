@@ -17,7 +17,7 @@
         .container {
             width: 1900px;
             margin: 0 auto;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
         }
         .content {
             width: 1000px;
@@ -27,8 +27,31 @@
         .area1 {
             width: 1000px;
             height: 50px;
-            background-color: cadetblue;
+            background-color: #ffffff;
         }
+        .cafe_text {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .round-button {
+            position: absolute;
+            top: -20px; /* 수평선 위에 위치하도록 설정 */
+            right: 0; /* 수평선의 오른쪽 끝에 배치 */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .round-button:hover {
+            background-color: #0056b3;
+        }
+
 
     </style>
 </head>
@@ -36,7 +59,11 @@
 <div class="container">
     <div class="content">
         <div class="area1">
-            <hr>
+            <hr style="border: none; background-color: transparent">
+            <span class="cafe_text">게시판 글쓰기</span>
+            <span style="float: right">등록</span>
+            <button class="round-button">임시등록</button>
+            <hr style="width: 100%; margin: 0;">
         </div>
     </div>
 </div>
