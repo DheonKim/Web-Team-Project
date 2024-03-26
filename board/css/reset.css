@@ -48,7 +48,7 @@ table {
 caption {
     display: none;
 }
-tbody > tr > td:nth-child(2){
+tbody > tr > td:nth-child(3){
     background-color: aqua;
     text-align: left;
 }
