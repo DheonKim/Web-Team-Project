@@ -17,12 +17,12 @@ img {
     border: none; /* img 태그의 모든 테두리선은 없음으로 초기화  */
 }
 
-/*body {*/
+body {
 /*    font-family: 'Verdana'; !* 글꼴 *!*/
-/*    font-size: 14px; !* 글자 크기 *!*/
+    font-size: 16px; /* 글자 크기 */
 /*    color: black; !* 글자 색상 *!*/
 /*    line-height: 28px; !* 줄 간격 *!*/
-/*}*/
+}
 
 .board_list_wrap {
 
@@ -49,6 +49,9 @@ caption {
     display: none;
 }
 tbody > tr > td:nth-child(3){
-    background-color: aqua;
+    background-color: rgba(108, 239, 93, 0.36);
     text-align: left;
+}
+tbody {
+    font-size: 18pt;
 }
