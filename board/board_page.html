@@ -4,74 +4,316 @@
     <meta charset="UTF-8">
     <title>게시판 목록</title>
     <link rel="stylesheet" href="css/reset.css">
+    <style>
+        @font-face {
+            font-family: 'AppleSDGothicNeo';
+            font-weight: 600;
+            src: url("./font/AppleSDGothicNeoSB.woff2") format("woff2");
+        }
+
+        .board_list_wrap {
+            width: 1000px;
+            box-sizing: border-box;
+            padding: 50px;
+        }
+
+        .board_list {
+            width: 100%;
+            border-top: 2px solid darkslateblue;
+        }
+
+        .board_list th,
+        .board_list td {
+            /*border: 1px solid #999;*/
+            padding: 12px;
+            font-size: 14pt;
+        }
+
+        .board_list td {
+            text-align: center;
+        }
+
+        /* 테이블 칸 과 칸사이 줄 간격 제거*/
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            display: none;
+        }
+
+        /* 테이블 제목 */
+        tbody > tr > td:nth-child(2) {
+            /*background-color: rgba(108, 239, 93, 0.36);*/
+            text-align: left;
+        }
+
+        /* 테이블 제목 호버 효과 */
+        .board_list > tbody > tr > td:nth-child(2):hover {
+            text-decoration: underline;
+        }
+
+        tbody {
+            font-size: 14pt;
+            font-family: 'AppleSDGothicNeo', sans-serif;
+        }
+
+        .board_list tr {
+            border-bottom: 1px solid #999;
+        }
+
+        .paging {
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+            text-align: center; /* 중앙 정렬 */
+            font-size: 0; /* 인라인 블록 간격 제거 */
+            /*background: #666666;*/
+            line-height: 0; /* 폰트 크기가 0이므로 line-height 도 0으로 설정 */
+        }
+
+        .paging a {
+            display: inline-block; /* 인라인 블록 요소로 설정 */
+            font-size: 14pt; /* 페이지 번호의 폰트 크기 설정 */
+            padding: 5px 10px;
+            border-radius: 100px;
+            line-height: normal; /* 인라인 블록 요소에 기본 라인 높이 적용 */
+            margin: 0 5px; /* 좌우 간격 설정 */
+        }
+
+        .board_list_wrap .paging a:first-child {
+            margin-left: 0;
+        }
+
+
+        .board_list_wrap .paging a.num {
+            border: 1px solid green;
+            font-weight: 600;
+        }
+
+        .board_list_wrap .paging a.num.on {
+            background: green;
+            color: white;
+        }
+
+        .center_wrap {
+            display: flex;
+            justify-content: center; /* 가운데 정렬 */
+        }
+
+        .category {
+            font-size: 26px;
+            font-weight: 1000;
+            height: 50px;
+        }
+
+        /* 게시글 제목 글자*/
+        tbody > tr:nth-child(n) > td:nth-child(2) {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .search_bar {
+            display: flex;
+            justify-content: center;
+            /*background: green;*/
+            flex-grow: 1; /* 검색바가 가능한 많은 공간을 차지하도록 함 */
+
+        }
+
+        .paging img {
+            vertical-align: middle; /* 이미지를 텍스트의 중간 높이로 정렬 */
+            width: 37px;
+            height: 37px;
+        }
+
+        .bottom_bar {
+            display: flex;
+            justify-content: space-between; /* 요소들을 양끝으로 정렬 */
+            /*align-items: center; !* 요소들을 수직으로 중앙 정렬 *!*/
+            margin-top: 20px;
+        }
+
+        .search_bar input[type="text"] {
+            width: 400px;
+            height: 40px;
+            /*align-content: center;*/
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+
+        /* 검색 버튼 */
+        .search_bar button {
+            /*height: 40px;*/
+            width: 50px;
+            /*padding-left: 20px;*/
+            /*border: 1px solid #eee;*/
+            /*background: red;*/
+            /*text-align: center;*/
+            border-radius: 10px;
+            margin-left: 10px;
+
+        }
+
+        .buttons > button:nth-child(n) {
+            background: black;
+            color: white;
+            /*margin-left: 20px;*/
+            /*padding-left: 10px;*/
+            border-radius: 10px;
+            height: 40px;
+            margin-left: 10px; /* 버튼 간 여백 */
+            padding: 0 20px; /* 좌우 패딩 */
+        }
+
+        .buttons {
+            margin-left: auto; /* 자동으로 왼쪽 여백을 생성하여 오른쪽으로 요소를 밀어냄 */
+        }
+
+        /*.buttons button {*/
+        /*    height: 40px;*/
+        /*    margin-left: 10px; !* 버튼 간 여백 *!*/
+        /*    padding: 0 20px; !* 좌우 패딩 *!*/
+        /*}*/
+
+        /* 첫 번째 버튼에만 적용되는 왼쪽 마진 제거 */
+        .buttons button:first-child {
+            margin-left: 0;
+        }
+    </style>
 </head>
 <body>
-<div class="board_list_wrap">
-    <table class="board_list">
-        <caption>게시판 목록</caption>
-        <thead>
-        <tr>
-            <th>게시판</th>
-            <th>번호</th>
-            <th>제목</th>
-            <th>닉네임</th>
-            <th>작성일</th>
-            <th>조회수</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>자유게시판</td>
-            <td>6</td>
-            <td><a href="#">팟국가 9999</a></td>
-            <td>관리자</td>
-            <td>2024-03-26</td>
-            <td>303</td>
-        </tr>
-        <tr>
-            <td>자유게시판</td>
-            <td>5</td>
-            <td><a href="#">SBS 코리아</a>
-            </td>
-            <td>관리자</td>
-            <td>2024-03-26</td>
-            <td>11</td>
-        </tr>
-        <tr>
-            <td>자유게시판</td>
-            <td>4</td>
-            <td><a href="#">코딩은 랄튜브</a></td>
-            <td>관리자</td>
-            <td>2024-03-25</td>
-            <td>1034</td>
-        </tr>
-        <tr>
-            <td>자유게시판</td>
-            <td>3</td>
-            <td><a href="#">닭 8천만 마리로 전투기를 구매한 나라</a></td>
-            <td>관리자</td>
-            <td>2024-03-25</td>
-            <td>503</td>
-        </tr>
-        <tr>
-            <td>자유게시판</td>
-            <td>2</td>
-            <td><a href="#">파묘 감독이 사운드에서 아쉬워했던 것</a></td>
-            <td>관리자</td>
-            <td>2024-03-24</td>
-            <td>600</td>
-        </tr>
-        <tr>
-            <td>자유게시판</td>
-            <td>1</td>
-            <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
-            <td>관리자</td>
-            <td>2024-03-23</td>
-            <td>1023</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+<div class="center_wrap"> <!-- 새로운 div 태그 추가 -->
+    <div class="board_list_wrap"> <!-- 게시판    -->
+        <h2 class="category">자유 게시판</h2>
+        <table class="board_list">
+            <caption>게시판 목록</caption>
+            <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>작성일</th>
+                <th>추천</th>
+                <th>조회</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>10</td>
+                <td><a href="board_content1.html">[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</a></td>
+                <td>랄롱</td>
+                <td>2024.03.26</td>
+                <td>15</td>
+                <td>303</td>
+            </tr>
 
+            <tr>
+                <td>9</td>
+                <td><a href="board_content1.html">[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</a></td>
+                <td>관리자</td>
+                <td>2024.03.26</td>
+                <td>15</td>
+                <td>303</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="#">SBS 코리아</a>
+                </td>
+                <td>관리자</td>
+                <td>2024.03.26</td>
+                <td>30</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="#">코딩은 랄튜브</a></td>
+                <td>관리자</td>
+                <td>2024.03.25</td>
+                <td>40</td>
+                <td>1034</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="#">닭 8천만 마리로 전투기를 구매한 나라</a></td>
+                <td>관리자</td>
+                <td>2024.03.25</td>
+                <td>30</td>
+                <td>503</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="#">파묘 감독이 사운드에서 아쉬워했던 것</a></td>
+                <td>관리자</td>
+                <td>2024.03.24</td>
+                <td>3</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="paging">
+            <img src="img/페이지아이콘/왼쪽 페이지.png" alt="이전 페이지"/>
+            <a href="#" class="num on">1</a>
+            <a href="#" class="num">2</a>
+            <a href="#" class="num">3</a>
+            <img src="img/페이지아이콘/우측 페이지.png" alt="다음 페이지"/>
+        </div>
+
+        <!-- 검색바와 글쓰기, 인기글 버튼을 포함하는 div -->
+        <div class="bottom_bar">
+            <!-- 검색바 -->
+            <div class="search_bar">
+                <label><input type="text" placeholder="검색어를 입력하세요."></label>
+                <button type="submit">검색</button>
+            </div>
+            <!-- 글쓰기, 인기글 버튼 -->
+            <div class="buttons">
+                <button type="button">인기글</button>
+                <button type="button">글쓰기</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
