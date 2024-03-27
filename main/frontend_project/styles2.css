@@ -1,0 +1,117 @@
+/* section2 css */
+.section2 {
+    position: relative;
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 25px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.main_contantsHeader {
+    /* background: #f06; */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+}
+.main_contantsHeader_title {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.main_contantsHeader_title_top-txt {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -.2px;
+}
+#section2Header_timer{
+    height: 52px;
+    margin-bottom: -10px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-size: 52px;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 100%;
+}
+#section2Header_timer > * {
+    padding-right: 10px; /* 오른쪽 내부 여백 추가 */
+    padding-left: 10px; /* 왼쪽 내부 여백 추가 */
+
+    margin-right: 10px; /* 오른쪽 외부 여백 추가 */
+    margin-left: 10px; /* 왼쪽 외부 여백 추가 */
+
+}
+.list_containerCircle {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+.list_containerCircle {
+    width: 840px;
+    margin: 0 auto;
+    text-align: center;
+}
+.list_itemCircle {
+    width: 240px;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: content-box;
+    flex: 0 0 auto;
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+    text-align: center;
+    position: relative;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.banner_thumbnail {
+    /* overflow: hidden; */
+    position: relative;
+    width: 100%;
+    /* padding-top: 100%; */
+    border-radius: 100%;
+    background-color: none;
+    padding-right: 50px;
+    margin-right: 50px;
+}
+.banner_info{
+    /* background: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.banner_txt1 {
+    margin-bottom: 2px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+}
+.banner_txt2 {
+    font-size: 16px;
+    line-height: 20px;
+    color: #aaa;
+}

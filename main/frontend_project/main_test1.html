@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main_test1</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        body>h1,
+        body>nav,
+        body>main {
+            width: 1900px;
+            margin: 0 auto;
+        }
+
+        body>section {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        body>h2 {
+            /*height: 100px; !* 높이를 지정해서 레이아웃 영역 확인 *!*/
+            /*background: #f06;*/
+            padding: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+        }
+
+
+
+        body>nav {
+            height: 50px;
+            /* 높이를 지정해서 레이아웃 영역 확인 */
+            background: #0f6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1></h1>
+    </header>
+
+    <nav></nav>
+
+    <style>
+        body>section:nth-of-type(1) {
+            width: 1200px;
+            height: auto;
+            background: none;
+            display: flex;
+            margin-top: 100px;
+        }
+    </style>
+
+    <section>
+        <div class="banner1"><img src="banner/banner1.jpg" alt="최상단 배너"></div>
+    </section>
+
+
+    <section class="section2" data-personal-yn="N">
+        <header class="main_contantsHeader">
+            <h2 class="main_contantsHeader_title" style="background-color: #fff;">
+                <span class="main_contantsHeader_title_top-txt" style="color:#aaa">단 7일간만! 프라임 브랜드 위크에서 제공하는</span>
+                <span style="color: black;">서프라이즈 혜택</span>
+            </h2>
+            <div id="section2Header_timer" data-time="04/02/2024 00:00" style="background-color: #fff; color:#0078FF">
+            </div>
+            <script src="styles2js.js"></script>
+        </header>
+        <div style="margin-bottom: -50px;">
+            <div class="list_containerCircle">
+                <div class="list_itemCircle">
+                    <div class="banner">
+                        <a href="#" class="banner_thumbnail"><img src="banner/sale1.jpg" alt="세일썸네일"></a>
+                        <div class="banner_info">
+                            <span class="banner_txt1">최대 60% 할인</span>
+                            <span class="banner_txt2">자세히 보기 ></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_itemCircle">
+                    <div class="banner">
+                        <a href="#" class="banner_thumbnail"><img src="banner/copon1.jpg" alt="쿠폰썸네일"></a>
+                        <div class="banner_info">
+                            <span class="banner_txt1">최대 15% 쿠폰</span>
+                            <span class="banner_txt2">자세히 보기 ></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_itemCircle">
+                    <div class="banner">
+                        <a href="#" class="banner_thumbnail"><img src="banner/free1.jpg" alt="무료반품썸네일"></a>
+                        <div class="banner_info">
+                            <span class="banner_txt1">무료 반품</span>
+                            <span class="banner_txt2">자세히 보기 ></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section></section>
+
+</body>
+
+</html>
