@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <head>
     <meta charset="UTF-8">
     <title>글쓰기 화면</title>
@@ -11,7 +12,7 @@
         }
         body {
             font-family: 'AppleSDGothicNeo';
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
         }
         .container {
@@ -31,41 +32,205 @@
         }
         .cafe_text {
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            font-size: 22px;
         }
-        .round-button {
-            position: absolute;
-            top: -20px; /* 수평선 위에 위치하도록 설정 */
-            right: 0; /* 수평선의 오른쪽 끝에 배치 */
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
+        .area2 {
+            width: 1000px;
+            height: 130px;
+            background-color: rgb(255, 255, 255);
+            border: #ededed solid 1px;
+            border-radius: 15px;
+        }
+        .category1 {
+            width: 460px;
+            height: 40px;
             font-size: 16px;
-            text-align: center;
-            text-decoration: none;
+            margin: 15px 10px 15px 25px;
+            float: left;
+            border: none;
+            border-bottom: 1px solid #ededed;
         }
-
-        .round-button:hover {
-            background-color: #0056b3;
+        .category2 {
+            width: 460px;
+            height: 40px;
+            font-size: 16px;
+            margin: 15px 25px 15px 10px;
+            float: right;
+            border: none;
+            border-bottom: 1px solid #ededed;
+            color: #f5f5f5;
         }
-
+        input[type=text] {
+            width: 945px;
+            height: 40px;
+            margin-left: 25px;
+            font-size: 17px;
+            border-radius: 10px;
+            border: none;
+            background-color: #f5f5f5;
+        }
+        .writing_area {
+            margin-top: 10px;
+            width: 1000px;
+            height: 700px;
+            border: solid 1px #ededed;
+            border-radius: 10px;
+        }
+        .function_area {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(246, 246, 246);
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            margin-left: 15px;
+        }
+        .fucntion_list li {
+            list-style: none;
+            font-size: 16px;
+            padding: 5px;
+            margin: 5px;
+            display: inline-block;
+            padding-top: 10px;
+        }
+        .icon {
+            position: relative; /* 아이콘에 대해 상대적 위치 지정 */
+             /* 아이콘을 위로 이동 */
+            margin-right: 5px; /* 아이콘과 텍스트 사이의 간격 조정 */
+        }
+        .font_area {
+            width: 100%;
+            height: 40px;
+            background-color: rgb(246, 246, 246);
+            border: 1px solid #ededed;;
+            border-radius: 5px;
+        }
+        .font_area li {
+            list-style: none;
+            font-size: 17px;
+            padding: 5px;
+            margin-top: 5px;
+            margin-right: 5px;
+            display: inline-block;
+        }
+        li {
+            color: rgb(111, 111, 111);
+        }
+        .content_area{
+            display: flex;
+            flex-direction: column; /* 요소를 수직(열) 방향으로 배치 */
+            justify-content: center; /* 수직 방향으로 가운데 정렬 */
+            align-items: center; /* 수평 방향으로 가운데 정렬 */
+        }
+        textarea[name=contents] {
+            width: 850px;
+            height: 450px;
+            border: 1px solid white;
+            font-size: 20px;
+            padding: 20px;
+            padding-top: 50px;
+            border-bottom: #ededed solid 1px;
+            resize: none;
+        }
+        input[name=tag_content] {
+            width: 900px;
+            height: 40px;
+            margin-left: 2px;
+            font-size: 15px;
+            border: none;
+            background-color: #ffffff;
+            margin-top: 15px;
+        }
 
     </style>
 </head>
 <body>
+<form name="frmPost" action="action.php" method="post">
 <div class="container">
     <div class="content">
         <div class="area1">
             <hr style="border: none; background-color: transparent">
             <span class="cafe_text">게시판 글쓰기</span>
-            <span style="float: right">등록</span>
-            <button class="round-button">임시등록</button>
+            <input type="submit" style="float: right; background-color: rgb(219, 248, 238); color:rgb(21, 169, 120);" value="등록"></input>
+            <button style="float: right; margin-right: 5px; margin-bottom: 3px; background-color: rgb(250, 250, 250);">임시등록 | 0</button>
             <hr style="width: 100%; margin: 0;">
+        </div>
+        <div class="area2">
+            <div class="title_area">
+                <select class="category1">
+                    <option value="option1">게시판을 선택해 주세요.</option>
+                    <option value="option2">자유게시판</option>
+                    <option value="option3">Q&A</option>
+                    <option value="option3">코디게시판</option>
+                    <option value="option3">매거진</option>
+                </select>
+                <select class="category2">
+                    <option value="option1">말머리 선택</option>
+                    <option value="option2">일상이야기</option>
+                    <option value="option3">옷이야기</option>
+                    <option value="option3">Q&A</option>
+                </select>
+                <input type="text" name="title" id="title" placeholder="  제목을 입력해 주세요.">
+            </div>
+        </div>
+        <div class="area3">
+            <div class="writing_area">
+                <div class="function_area">
+                    <ul class="fucntion_list">
+                        <li><i class="fas fa-camera icon"></i>사진</li>
+                        <li><i class="fab fa-instagram icon"></i>SNS사진</li>
+                        <li><i class="fas fa-video icon"></i>동영상</li>
+                        <li><i class="fas fa-sticky-note icon"></i>스티커</li>
+                        <li><i class="fas fa-quote-left icon"></i>인용구</li>
+                        <li><i class="fas fa-grip-lines icon"></i>구분선</li>
+                        <li><i class="fas fa-file icon"></i>파일</li>
+                        <li><i class="fas fa-link icon"></i>링크</li>
+                        <li><i class="fas fa-map-marker-alt icon"></i>장소</li>
+                        <li><i class="fas fa-bookmark icon"></i>글감</li>
+                        <li><i class="fas fa-poll icon"></i>투표</li>
+                    </ul>
+                </div>
+                <div class="font_area">
+                    <ul class="font_list">
+                        <li>본문</li>
+                        <li>기본서체</li>
+                        <li>15</li>
+                        <li>|</li>
+                        <li><i class="fas fa-bold"></i></li>
+                        <li><i class="fas fa-italic"></i></li>
+                        <li><i class="fas fa-underline"></i></li>
+                        <li><i class="fas fa-strikethrough"></i></li>
+                        <li><i class="fas fa-font"></i></li>
+                        <li>|</li>
+                        <li><i class="fas fa-text-height"></i></li>
+                        <li><i class="fas fa-paint-brush"></i></li>
+                        <li><i class="fas fa-fill-drip"></i></li>
+                        <li><i class="fas fa-align-left"></i></li>
+                        <li><i class="fas fa-align-center"></i></li>
+                        <li><i class="fas fa-align-right"></i></li>
+                        <li><i class="fas fa-align-justify"></i></li>
+                    </ul>
+                </div>
+                <div class="content_area">
+                    <textarea name="contents" placeholder="내용을 입력하세요."></textarea>
+                <input type="text" name="tag_content" id="title2" placeholder="  #태그를 입력해주세요 (최대 10개)">
+                </div>
+            </div>
         </div>
     </div>
 </div>
+</form>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
