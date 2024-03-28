@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <title>게시판 목록</title>
     <link rel="stylesheet" href="css/reset.css">
+    <!-- 게시판 -->
     <style>
         @font-face {
             font-family: 'AppleSDGothicNeo';
             font-weight: 600;
             src: url("./font/AppleSDGothicNeoSB.woff2") format("woff2");
         }
-
+        * {
+            font-family: 'AppleSDGothicNeo', sans-serif;
+        }
         .board_list_wrap {
             width: 1000px;
             box-sizing: border-box;
             padding: 50px;
+            /*background-color: #f5f5f5;*/
+
         }
 
         .board_list {
             width: 100%;
+            box-sizing: border-box;
             border-top: 2px solid darkslateblue;
+            background-color: #f5f5f5;
+
         }
 
         .board_list th,
@@ -64,6 +72,7 @@
 
         .paging {
             display: flex;
+            box-sizing: border-box;
             margin-top: 20px;
             justify-content: center;
             text-align: center; /* 중앙 정렬 */
@@ -102,9 +111,10 @@
         }
 
         .category {
-            font-size: 26px;
-            font-weight: 1000;
+            font-size: 24px;
+            /*font-weight: 1000;*/
             height: 50px;
+            font-weight: bold;
         }
 
         /* 게시글 제목 글자*/
@@ -171,22 +181,73 @@
             margin-left: auto; /* 자동으로 왼쪽 여백을 생성하여 오른쪽으로 요소를 밀어냄 */
         }
 
-        /*.buttons button {*/
-        /*    height: 40px;*/
-        /*    margin-left: 10px; !* 버튼 간 여백 *!*/
-        /*    padding: 0 20px; !* 좌우 패딩 *!*/
-        /*}*/
-
         /* 첫 번째 버튼에만 적용되는 왼쪽 마진 제거 */
         .buttons button:first-child {
             margin-left: 0;
         }
+
+    /*    푸터 START*/
+
+        footer {
+            /*background-color: #f5f5f5;*/
+            color: #333;
+            font-size: 14px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+        }
+
+        .footer-container {
+            max-width: 1000px;
+
+            margin: 0 auto;
+            /*background-color: #f5f5f5;*/
+        }
+
+        .footer-address {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center; /* 가로 정렬을 중앙으로 설정 */
+            flex-wrap: wrap; /* 내용이 넘치면 다음 줄로 이동 */
+        }
+
+        .footer-links ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin: 0 10px; /* 좌우 마진을 조정하여 버튼 사이 간격 설정 */
+        }
+
+        .footer-btn {
+            background-color: #eee;
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            display: inline-block; /* 버튼이 옆으로 배열되도록 설정 */
+            transition: background-color 0.3s;
+        }
+
+        .footer-btn:hover {
+            background-color: #0056b3; /* 버튼 위에 마우스를 올렸을 때 색상 변경 */
+        }
+    /*    푸터 END*/
     </style>
 </head>
 <body>
 <div class="center_wrap"> <!-- 새로운 div 태그 추가 -->
     <div class="board_list_wrap"> <!-- 게시판    -->
-        <h2 class="category">자유 게시판</h2>
+        <h1 class="category"><a href="#">자유 게시판</a></h1>
         <table class="board_list">
             <caption>게시판 목록</caption>
             <thead>
@@ -202,7 +263,7 @@
             <tbody>
             <tr>
                 <td>10</td>
-                <td><a href="board_content1.html">[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</a></td>
+                <td><a href="board_content.html">[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</a></td>
                 <td>랄롱</td>
                 <td>2024.03.26</td>
                 <td>15</td>
@@ -211,7 +272,7 @@
 
             <tr>
                 <td>9</td>
-                <td><a href="board_content1.html">[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</a></td>
+                <td><a href="board_content.html">[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</a></td>
                 <td>관리자</td>
                 <td>2024.03.26</td>
                 <td>15</td>
@@ -315,5 +376,34 @@
         </div>
     </div>
 </div>
+
+<!--푸터START-->
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <ul class="footer-links">
+                <li><a href="#" class="footer-btn">회사소개</a></li>
+                <li><a href="#" class="footer-btn">인재채용</a></li>
+                <li><a href="#" class="footer-btn">제휴제안</a></li>
+                <li><a href="#" class="footer-btn">이용약관</a></li>
+                <li><a href="#" class="footer-btn">개인정보처리방침</a></li>
+            </ul>
+        </div>
+        <p class="copyright"><strong>COPYRIGHT (C) MUSINSA ALL RIGHTS RESERVED.</strong></p>
+        <p>무신사닷컴 내 매거진, 스트리트스냅, 스토어 등 무신사 자체 생성 콘텐츠는 무신사닷컴 및 무신사 계약업체에 저작권이 있습니다.<br> 이러한 콘텐츠는 출처를 밝히고 비상업적인 용도에서만 활용하실
+            수 있습니다.</p>
+        <p>커뮤니티 및 중고장터, 댓글 등 무신사 회원이 올린 이미지가 저작권에 위배될 경우 신고하시면 검토 후 삭제하겠습니다.</p>
+        <p>10 0% AUTHENTIC: 무신사스토어에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.</p>
+        <div class="footer-address">
+            <p>주식회사 무신사 (MUSINSA Co., Ltd.) | 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 무신사캠퍼스 엔1) | 사업자등록번호 : 211-88-79575 |
+                통신판매업신고 : 2022-서울성동-01952 | 대표 : 한문일 | 개인정보 보호책임자 : 정광은 | 호스팅사업자 : (주)무신사</p>
+        </div>
+        <p id="notice">일부 상품의 경우 주식회사 무신사는 통신판매의 당사자가 아닌 통신판매중개자로서 상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을
+            확인하시기 바랍니다.<br>당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
+    </div>
+</footer>
+<!--푸터 END-->
+
 </body>
 </html>

@@ -11,6 +11,10 @@
             src: url("./font/AppleSDGothicNeoSB.woff2") format("woff2");
         }
 
+        * {
+            font-family: 'AppleSDGothicNeo', sans-serif;
+        }
+
         footer {
             /*background-color: #f5f5f5;*/
             color: #333;
@@ -18,25 +22,13 @@
             padding: 20px;
             text-align: center;
             display: flex;
-            font-family: 'AppleSDGothicNeo', sans-serif;
-
         }
 
         .footer-container {
             max-width: 1000px;
-
             margin: 0 auto;
-            background-color: #f5f5f5;
+            /*background-color: #f5f5f5;*/
         }
-
-        /*footer a {*/
-        /*    color: #007bff;*/
-        /*    text-decoration: none;*/
-        /*}*/
-
-        /*footer a:hover {*/
-        /*    text-decoration: underline;*/
-        /*}*/
 
         .footer-address {
             margin-top: 20px;
@@ -45,7 +37,20 @@
         }
 
         .footer-links {
-            margin-top: 20px;
+            display: flex;
+            justify-content: center; /* 가로 정렬을 중앙으로 설정 */
+            flex-wrap: wrap; /* 내용이 넘치면 다음 줄로 이동 */
+        }
+
+        .footer-links ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin: 0 10px; /* 좌우 마진을 조정하여 버튼 사이 간격 설정 */
         }
 
         .footer-btn {
@@ -62,25 +67,26 @@
         .footer-btn:hover {
             background-color: #0056b3; /* 버튼 위에 마우스를 올렸을 때 색상 변경 */
         }
-
     </style>
 </head>
 <body>
+
 <footer>
     <div class="footer-container">
-        <!-- 카테고리 버튼 추가 -->
         <div class="footer-links">
-            <a href="#회사소개URL" class="footer-btn">회사소개</a>
-            <a href="#인재채용URL" class="footer-btn">인재채용</a>
-            <a href="#제휴제안URL" class="footer-btn">제휴제안</a>
-            <a href="#이용약관URL" class="footer-btn">이용약관</a>
-            <a href="#개인정보처리방침URL" class="footer-btn">개인정보처리방침</a>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-btn">회사소개</a></li>
+                <li><a href="#" class="footer-btn">인재채용</a></li>
+                <li><a href="#" class="footer-btn">제휴제안</a></li>
+                <li><a href="#" class="footer-btn">이용약관</a></li>
+                <li><a href="#" class="footer-btn">개인정보처리방침</a></li>
+            </ul>
         </div>
         <p class="copyright"><strong>COPYRIGHT (C) MUSINSA ALL RIGHTS RESERVED.</strong></p>
         <p>무신사닷컴 내 매거진, 스트리트스냅, 스토어 등 무신사 자체 생성 콘텐츠는 무신사닷컴 및 무신사 계약업체에 저작권이 있습니다.<br> 이러한 콘텐츠는 출처를 밝히고 비상업적인 용도에서만 활용하실
             수 있습니다.</p>
         <p>커뮤니티 및 중고장터, 댓글 등 무신사 회원이 올린 이미지가 저작권에 위배될 경우 신고하시면 검토 후 삭제하겠습니다.</p>
-        <p>10   0% AUTHENTIC: 무신사스토어에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.</p>
+        <p>10 0% AUTHENTIC: 무신사스토어에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.</p>
         <div class="footer-address">
             <p>주식회사 무신사 (MUSINSA Co., Ltd.) | 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 무신사캠퍼스 엔1) | 사업자등록번호 : 211-88-79575 |
                 통신판매업신고 : 2022-서울성동-01952 | 대표 : 한문일 | 개인정보 보호책임자 : 정광은 | 호스팅사업자 : (주)무신사</p>
@@ -88,8 +94,6 @@
         <p id="notice">일부 상품의 경우 주식회사 무신사는 통신판매의 당사자가 아닌 통신판매중개자로서 상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을
             확인하시기 바랍니다.<br>당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
     </div>
-
 </footer>
-
 </body>
 </html>
