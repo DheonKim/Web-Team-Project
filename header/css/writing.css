@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-weight: 600;
+    src: url("../font/AppleSDGothicNeoSB.woff2") format("woff2");
+}
+body {
+    font-family: 'AppleSDGothicNeo';
+    margin: 0 auto;
+    padding: 0;
+}
+.writing_container {
+    width: 1900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.writing_content {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.writing_area1 {
+    width: 1000px;
+    height: 50px;
+    background-color: #ffffff;
+}
+.writing_cafe_text {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.writing_area2 {
+    width: 1000px;
+    height: 130px;
+    background-color: rgb(255, 255, 255);
+    border: #ededed solid 1px;
+    border-radius: 15px;
+}
+.writing_category1 {
+    width: 460px;
+    height: 40px;
+    font-size: 16px;
+    margin: 15px 10px 15px 25px;
+    float: left;
+    border: none;
+    border-bottom: 1px solid #ededed;
+}
+.writing_category2 {
+    width: 460px;
+    height: 40px;
+    font-size: 16px;
+    margin: 15px 25px 15px 10px;
+    float: right;
+    border: none;
+    border-bottom: 1px solid #ededed;
+    color: #f5f5f5;
+}
+input[type=text] {
+    width: 945px;
+    height: 40px;
+    margin-left: 25px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f5f5f5;
+}
+.writing_area3 {
+    margin-top: 10px;
+    width: 1000px;
+    height: 700px;
+    border: solid 1px #ededed;
+    border-radius: 10px;
+}
+.writing_function_area {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(246, 246, 246);
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: 15px;
+}
+.writing_function_list li {
+    list-style: none;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    padding-top: 10px;
+}
+.writing_icon {
+    position: relative; /* 아이콘에 대해 상대적 위치 지정 */
+    /* 아이콘을 위로 이동 */
+    margin-right: 5px; /* 아이콘과 텍스트 사이의 간격 조정 */
+}
+.writing_font_area {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid #ededed;
+;
+    border-radius: 5px;
+}
+.writing_font_area li {
+    list-style: none;
+    font-size: 17px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+li {
+    color: rgb(111, 111, 111);
+}
+.writing_content_area {
+    display: flex;
+    flex-direction: column; /* 요소를 수직(열) 방향으로 배치 */
+    justify-content: center; /* 수직 방향으로 가운데 정렬 */
+    align-items: center; /* 수평 방향으로 가운데 정렬 */
+}
+textarea[name=contents] {
+    width: 850px;
+    height: 450px;
+    border: 1px solid white;
+    font-size: 20px;
+    padding: 20px;
+    padding-top: 50px;
+    border-bottom: #ededed solid 1px;
+    resize: none;
+}
+input[name=tag_content] {
+    width: 900px;
+    height: 40px;
+    margin-left: 2px;
+    font-size: 15px;
+    border: none;
+    background-color: #ffffff;
+    margin-top: 15px;
+}

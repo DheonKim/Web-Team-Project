@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-weight: 600;
+    src: url("../font/AppleSDGothicNeoSB.woff2") format("woff2");
+}
+body {
+    font-family: 'AppleSDGothicNeo';
+    color : white;
+    margin: 0 auto;
+    padding: 0;
+    width: 1900px;
+}
+.header_main-container {
+    width: 1700px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #000000;
+    display: flex;
+}
+.header_main-container2 {
+    width: 1700px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: #000000;
+    display: flex;
+}
+.header_text_box1{
+    width: 460px;
+    height: 50px;
+}
+.header_logo {
+    width: 780px;
+    height: 50px;
+}
+.header_text_box2 {
+    width: 460px;
+    height: 50px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header_text_box1 > ul > li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin: 10px;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+.header_area1 {
+    height: 50px;
+    width: 1700px;
+    display: flex;
+    align-items: center;
+}
+.header_area2 {
+    height: 80px;
+    width: 1700px;
+    display: flex;
+    align-items: center;
+}
+.header_text_box2 > ul > li {
+    list-style: none;
+    display: inline-block;
+    float: right;
+    margin: 10px;
+    margin-right: 25px;
+    margin-top: 30px;
+}
+.header_logo {
+    width: 780px;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_top10 {
+    width: 460px;
+    height: 80px;
+}
+.header_top10 {
+    position: relative;
+}
+
+/* 브랜드 Top10 버튼 스타일링 */
+.header_brand-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    border: none;
+    border-bottom: solid white 1px;
+    border-top: solid white 1px;
+    border-radius: 10px;
+}
+
+/* 버튼에 마우스를 올렸을 때의 스타일링 */
+.header_brand-button:hover {
+    background-color: #333;
+}
+.header_category {
+    width: 780px;
+    height: 80px;
+    text-align: center;
+    margin-right: auto;
+}
+.header_search {
+    width: 460px;
+    height: 80px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 25px;
+    margin-top: 27px;
+
+}
+
+.header_search input[type="text"],
+.header_search button {
+    margin-left: 10px;
+}
+
+.header_search input[type="text"] {
+    width: 180px;
+    height: 30px;
+    background-color: black;
+    border: none;
+    border-bottom: white solid 1px;
+    color: white;
+    font-size: 15px;
+}
+
+input[type="text"]::placeholder {
+    color: #ffffff;
+    font-size: 15px;
+}
+button[type="submit"] {
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+button[type="submit"] i.fas.fa-search {
+    font-size: 24px;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+}
+
+.header_category ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+
+.header_category ul li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header_category ul li:hover .header_subcategory-list {
+    display: none;
+}
+
+.header_category ul .header_subcategory-list {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 999;
+    list-style: none;
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.header_category ul .header_subcategory-list li {
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    text-align: center;
+    width: 50%;
+    width: calc(50% - 100px);
+}
+
+.header_category ul li:hover .header_subcategory-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_subcategory-list li {
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.header_subcategory-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_subcategory-list li {
+    margin: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_subcategory-list {
+    display: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+.header_logo {
+    cursor: pointer;
+}

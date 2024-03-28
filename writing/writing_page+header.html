@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/writing.css">
+<link rel="stylesheet" href="css/header.css">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기 화면</title>
+</head>
+<style>
+    .header_text_box1 > ul > li,
+    .header_category > ul > li,
+    .header_text_box2 > ul > li
+    {
+        color: white;
+    }
+    .writing_category2 {
+        color: #999999;
+    }
+    input[id=title]::placeholder {
+        color: #707070;
+    }
+    input[id=title2]::placeholder {
+        color: #707070;
+    }
+    .writing_function_list  {
+        margin-right: 5px;
+    }
+    li, .header_logo {
+        cursor: pointer;
+    }
+</style>
+<header>
+    <div class="header_main-container">
+        <div class="header_area1">
+            <div class="header_text_box1">
+                <ul>
+                    <li>고객서비스</li>
+                    <li>매거진</li>
+                    <li>매장찾기</li>
+                    <li>ººº</li>
+                </ul>
+            </div>
+            <div class="header_logo">
+                <img src="./img/logo.jpg" width="230" height="180">
+            </div>
+            <div class="header_text_box2">
+                <ul>
+                    <li>장바구니(0)</li>
+                    <li>즐겨찾기</li>
+                    <li>로그인</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header_main-container2">
+        <div class="header_area2">
+            <div class="header_top10">
+                <button class="header_brand-button">브랜드 TOP 10</button>
+            </div>
+            <div class="header_category">
+                <ul>
+                    <li>Man
+                        <ul class="header_subcategory-list">
+                            <li>전체상의</li>
+                            <li>아우터</li>
+                            <li>바지</li>
+                            <li>가방</li>
+                            <li>스니커즈</li>
+                            <li>신발</li>
+                            <li>시계</li>
+                            <li>모자</li>
+                            <li>스포츠양말/레그웨어</li>
+                            <li>속옷</li>
+                            <li>안경</li>
+                            <li>주얼리</li>
+                            <li>액세서리</li>
+                            <li>뷰티</li>
+                            <li>디지털/테크</li>
+                            <li>리빙컬처</li>
+                            <li>반려동물</li>
+                            <li>세일</li>
+                        </ul></li>
+                    <li>Woman<ul class="header_subcategory-list">
+                        <li>전체상의</li>
+                        <li>아우터</li>
+                        <li>바지</li>
+                        <li>가방</li>
+                        <li>스니커즈</li>
+                        <li>신발</li>
+                        <li>시계</li>
+                        <li>모자</li>
+                        <li>스포츠양말/레그웨어</li>
+                        <li>속옷</li>
+                        <li>안경</li>
+                        <li>주얼리</li>
+                        <li>액세서리</li>
+                        <li>뷰티</li>
+                        <li>디지털/테크</li>
+                        <li>리빙컬처</li>
+                        <li>반려동물</li>
+                        <li>세일</li>
+                    </ul></li>
+                    <li>Style<ul class="header_subcategory-list">
+                        <li>아메카지</li>
+                        <li>캐주얼</li>
+                        <li>시크</li>
+                        <li>댄디</li>
+                        <li>비즈니스캐주얼</li>
+                        <li>골프</li>
+                        <li>로맨틱</li>
+                        <li>스포티</li>
+                        <li>스트릿</li>
+                        <li>고프코어</li>
+                        <li>하이틴</li>
+                        <li>미니멀</li>
+                    </ul></li>
+                    <li>Sale<ul class="header_subcategory-list">
+                        <li>#아이템레시피</li>
+                        <li>#팬츠키워드</li>
+                        <li>#캠페인</li>
+                        <li>#스니커</li>
+                        <li>#플레이어</li>
+                        <li>#뷰티</li>
+                        <li>#키즈</li>
+                        <li>#부티크</li>
+                        <li>#아울렛</li>
+                        <li>#골프</li>
+                        <li>#등급혜택</li>
+                        <li>#선착순</li>
+                    </ul></li>
+                    <li>Special<ul class="header_subcategory-list">
+                        <li>전체</li>
+                        <li>아디다스</li>
+                        <li>아식스</li>
+                        <li>시티브리즈</li>
+                        <li>코드그라피</li>
+                        <li>컨버스</li>
+                        <li>쿠어</li>
+                        <li>커버낫</li>
+                        <li>디스커버리 익스페디션</li>
+                        <li>도프</li>
+                        <li>제이슨던</li>
+                        <li>스트 포 우먼</li>
+                        <li>에스피오나지</li>
+                        <li>필루미네이트</li>
+                        <li>파인드카푸어</li>
+                        <li>굿라이프웍스</li>
+                        <li>헌터</li>
+                    </ul></li>
+                    <li>Magazine<ul class="header_subcategory-list">
+                        <li>All전체</li>
+                        <li>Sneakers스니커즈</li>
+                        <li>Fashion패션</li>
+                        <li>Beauty뷰티</li>
+                        <li>Culturelife컬쳐&라이프</li>
+                        <li>Etc기타</li>
+                        <li>Event이벤트</li>
+                        <li>Only단독</li>
+                    </ul></li>
+                    <li>Brand<ul class="header_subcategory-list">
+                        <li>전체</li>
+                        <li>아디다스</li>
+                        <li>아식스</li>
+                        <li>시티브리즈</li>
+                        <li>코드그라피</li>
+                        <li>컨버스</li>
+                        <li>쿠어</li>
+                        <li>커버낫</li>
+                        <li>디스커버리 익스페디션</li>
+                        <li>도프</li>
+                        <li>제이슨던</li>
+                        <li>스트 포 우먼</li>
+                        <li>에스피오나지</li>
+                        <li>필루미네이트</li>
+                        <li>파인드카푸어</li>
+                        <li>굿라이프웍스</li>
+                        <li>헌터</li>
+                    </ul></li>
+                </ul>
+            </div>
+            <div class="header_search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="제품 검색">
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const liElements = document.querySelectorAll('.header_category ul li'); // 모든 li 요소 선택
+        const mainContainer2 = document.querySelector('.header_main-container2'); // .main-container2 요소 선택
+
+        // 각 li 요소에 마우스 이벤트 리스너 추가
+        liElements.forEach(function(li) {
+            li.addEventListener("mouseover", function() {
+                mainContainer2.style.height = '500px'; // 헤더 창의 높이를 500px로 변경
+            });
+
+            li.addEventListener("mouseout", function() {
+                mainContainer2.style.height = ''; // 기본 높이로 되돌림
+            });
+        });
+    });
+
+    // JavaScript 코드
+    const categories = document.querySelectorAll('.header_category > ul > li');
+
+    categories.forEach(category => {
+        category.addEventListener('mouseover', () => {
+            const subcategoryList = category.querySelector('.header_subcategory-list');
+            if (subcategoryList) {
+                subcategoryList.style.display = 'block';
+                subcategoryList.style.height = '500px';
+            }
+        });
+
+        category.addEventListener('mouseout', () => {
+            const subcategoryList = category.querySelector('.header_subcategory-list');
+            if (subcategoryList) {
+                subcategoryList.style.display = 'none';
+                subcategoryList.style.height = '0px';
+            }
+        });
+    });
+
+</script>
+<br>
+<br>
+<br>
+<body>
+<form name="frmPost" action="action.php" method="post">
+    <div class="writing_container">
+        <div class="writing_content">
+            <div class="writing_area1">
+                <hr style="border: none; background-color: transparent">
+                <span class="writing_cafe_text">게시판 글쓰기</span>
+                <input type="submit" style="float: right; background-color: rgb(219, 248, 238); color:rgb(21, 169, 120);" value="등록"></input>
+                <button style="float: right; margin-right: 5px; margin-bottom: 3px; background-color: rgb(250, 250, 250);">임시등록 | 0</button>
+                <hr style="width: 100%; margin: 0;">
+            </div>
+            <div class="writing_area2">
+                <div class="writing_title_area">
+                    <select class="writing_category1">
+                        <option value="option1">게시판을 선택해 주세요.</option>
+                        <option value="option2">자유게시판</option>
+                        <option value="option3">Q&A</option>
+                        <option value="option3">코디게시판</option>
+                        <option value="option3">매거진</option>
+                    </select>
+                    <select class="writing_category2">
+                        <option value="option1">말머리 선택</option>
+                        <option value="option2">일상이야기</option>
+                        <option value="option3">옷이야기</option>
+                        <option value="option3">Q&A</option>
+                    </select>
+                    <input type="text" name="title" id="title" placeholder="  제목을 입력해 주세요.">
+                </div>
+            </div>
+            <div class="writing_area3">
+                <div class="writing_area">
+                    <div class="writing_function_area">
+                        <ul class="writing_function_list">
+                            <li><i class="fas fa-camera writing_icon"></i>사진</li>
+                            <li><i class="fab fa-instagram writing_icon"></i>SNS사진</li>
+                            <li><i class="fas fa-video writing_icon"></i>동영상</li>
+                            <li><i class="fas fa-sticky-note writing_icon"></i>스티커</li>
+                            <li><i class="fas fa-quote-left writing_icon"></i>인용구</li>
+                            <li><i class="fas fa-grip-lines writing_icon"></i>구분선</li>
+                            <li><i class="fas fa-file writing_icon"></i>파일</li>
+                            <li><i class="fas fa-link writing_icon"></i>링크</li>
+                            <li><i class="fas fa-map-marker-alt writing_icon"></i>장소</li>
+                            <li><i class="fas fa-bookmark writing_icon"></i>글감</li>
+                            <li><i class="fas fa-poll writing_icon"></i>투표</li>
+                        </ul>
+                    </div>
+                    <div class="writing_font_area">
+                        <ul class="writing_font_list">
+                            <li>본문</li>
+                            <li>기본서체</li>
+                            <li>15</li>
+                            <li>|</li>
+                            <li><i class="fas fa-bold"></i></li>
+                            <li><i class="fas fa-italic"></i></li>
+                            <li><i class="fas fa-underline"></i></li>
+                            <li><i class="fas fa-strikethrough"></i></li>
+                            <li><i class="fas fa-font"></i></li>
+                            <li>|</li>
+                            <li><i class="fas fa-text-height"></i></li>
+                            <li><i class="fas fa-paint-brush"></i></li>
+                            <li><i class="fas fa-fill-drip"></i></li>
+                            <li><i class="fas fa-align-left"></i></li>
+                            <li><i class="fas fa-align-center"></i></li>
+                            <li><i class="fas fa-align-right"></i></li>
+                            <li><i class="fas fa-align-justify"></i></li>
+                        </ul>
+                    </div>
+                    <div class="writing_content_area">
+                        <textarea name="contents" placeholder="내용을 입력하세요."></textarea>
+                        <input type="text" name="tag_content" id="title2" placeholder="  #태그를 입력해주세요 (최대 10개)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+<br><br><br>
+<br>
+<br><br><br><br><br>
+</html>
