@@ -17,16 +17,6 @@ img {
     border: none; /* img 태그의 모든 테두리선은 없음으로 초기화  */
 }
 
-/*body {*/
-/*    font-family: 'Verdana'; !* 글꼴 *!*/
-/*    font-size: 14px; !* 글자 크기 *!*/
-/*    color: black; !* 글자 색상 *!*/
-/*    line-height: 28px; !* 줄 간격 *!*/
-/*}*/
-
-.board_list_wrap {
-
-}
 
 .board_list {
     width: 100%;

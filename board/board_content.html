@@ -32,11 +32,6 @@
             border-radius: 6px; /* 본문 테두리 곡률 */
         }
 
-        .article_info {
-            margin-bottom: 20px;
-            color: #666;
-        }
-
         .article_content p {
             border-top: 2px solid #999;
             margin: 22px;
@@ -61,16 +56,15 @@
 
         h1 > a {
             font-size: 24px;
-            /*font-weight: 1000;*/
             height: 50px;
             font-weight: bold;
         }
 
         .article_info {
             font-size: 16px;
+            margin-bottom: 20px;
             /*background: #e9d4f2;*/
             display: flex;
-            /*font-weight: bold;*/
         }
 
         .name {
@@ -113,10 +107,10 @@
             height: 45px;
             box-sizing: border-box;
             /*background: orangered;*/
-
+            font-size: 14px;
         }
 
-        .comment_one {
+        .comment {
             width: 900px;
             margin: 10px 10px 20px;
             box-sizing: border-box;
@@ -126,7 +120,7 @@
             border-radius: 6px;
         }
 
-        .comment_one > img {
+        .comment > img {
             width: 80px;
             height: 80px;
             border-radius: 60px;
@@ -142,11 +136,6 @@
             font-weight: bold;
             color: black;
             padding-left: 10px;
-        }
-
-        .comment_content {
-            font-size: 14px;
-            /*color: #fff; !* 댓글 내용의 텍스트 색상 *!*/
         }
 
         .article_metadata {
@@ -172,7 +161,7 @@
             cursor: pointer;
         }
 
-        #like1, #share1 {
+        #likeIcon, #shareIcon {
             border-radius: 60px;
             /*border: 2px solid black;*/
             cursor: pointer;
@@ -180,7 +169,6 @@
             margin-right: 10px;
             margin-left: 10px;
             margin-bottom: 5px;
-            /*margin-bottom: 5px;*/
         }
 
         .like span, .share span {
@@ -188,8 +176,106 @@
             color: #000;
             margin-bottom: 10px;
         }
+        .comment_write_wrap {
+            width: 800px;
+            /*border: 1px solid #999;*/
+            border-radius: 6px;
+            background: rgba(188, 214, 243, 0.43);
+            padding: 15px;
+            box-sizing: border-box;
+            margin: 30px auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .comment_write {
+            width: 60%;
+            list-style: none;
+            padding: 0;
+        }
+        .list-group-item {
+            border: none;
+            padding: 0;
+        }
+        .replyIdPw {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .replyIdPw label {
+            flex-grow: 1;
+            /*margin-right: 100px;*/
+        }
+        .replyId, .replyPassword {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .commentContent {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none; /* 사용자가 크기를 조정하지 못하게 함 */
+        }
+        .replyButton {
+            width: 30%;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .replyButton:hover {
+            background-color: #333;
+        }
+        .comment_icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px; /* 아이콘과 입력 필드 사이의 간격 */
 
-        /*    푸터 START*/
+        }
+        .replyIdPw label {
+            display: flex;
+            align-items: center;
+            margin-right: 10px; /* 라벨 사이의 간격 */
+        }
+        .replyId, .replyPassword {
+            flex-grow: 1; /* 입력 필드가 가능한 공간을 모두 차지하도록 설정 */
+            margin-left: 5px; /* 아이콘과의 간격 조정 */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            /* 나머지 스타일은 동일하게 유지 */
+        }
+        .replyIdPw input[type="text"],
+        .replyIdPw input[type="password"] {
+            border: none;
+            outline: none;
+        }
+        /* 댓글창의 전체적인 디자인을 조정 */
+        .comment_write_wrap {
+            /* 기존 스타일 유지 */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 댓글 입력 요소들을 중앙 정렬 */
+        }
+        /* 텍스트 영역 스타일 조정 */
+        .commentContent {
+            width: 100%; /* 부모 요소의 전체 너비를 사용 */
+            margin-top: 10px; /* 상단 입력 필드와의 간격 */
+            /* 나머지 스타일은 동일하게 유지 */
+        }
+        /* 쓰기 버튼 스타일 조정 */
+        .replyButton {
+            width: auto; /* 버튼의 너비를 자동으로 조정 */
+            padding: 10px 20px; /* 버튼 내부 패딩 조정 */
+            margin-top: 10px; /* 텍스트 영역과의 간격 */
+        }
+        /* 푸터 START */
         footer {
             /*background-color: #f5f5f5;*/
             color: #333;
@@ -243,14 +329,19 @@
             background-color: #0056b3; /* 버튼 위에 마우스를 올렸을 때 색상 변경 */
         }
 
-        /*    푸터 END*/
+        /* 푸터 END */
     </style>
 </head>
 <body>
 <div class="center_wrap"> <!-- 중앙 정렬을 위한 외부 컨테이너 -->
-    <div class="article_wrap"> <!-- 게시글 내용을 담을 컨테이너 -->
+
+    <!-- 게시글 내용을 담을 컨테이너 START -->
+    <div class="article_wrap">
+        <!-- 현재 게시글 카테고리 -->
         <h1><a href="board_page.html">자유 게시판</a></h1>
-        <h2>[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</h2> <!-- 게시글 제목 -->
+        <!-- 게시글 제목 -->
+        <h2>[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</h2>
+        <!-- 작성자 정보 START -->
         <div class="article_info">
             <img id="profile" src="img/유튜브_기본프로필/유튜브_기본프로필_녹색.jpg" alt="프로필 사진"/>
             <div class="article_metadata">
@@ -258,32 +349,36 @@
                 <span class="table_info">2024.03.26 조회 303</span>
             </div>
         </div>
+        <!-- 작성자 정보 END -->
+        <!-- 게시판 글 내용 START -->
         <div class="article_content">
-            <p>
-                <br>
+            <p><br>
                 2024.04.03 WorldWide<br><br>
                 글내용~~
                 <img src="img/IMG_6967.jpg" height="803" width="828" alt="나이키 신발1"/>
                 <img src="img/IMG_6971.jpg" height="782" width="828" alt="나이키 신발2"/></p>
-            <!-- #1 todo 좋아요, 싫어요, 공유하기 버튼 추가 예정 -->
+            <!-- 좋아요, 공유하기 영역 START -->
             <div class="like_share_bar">
                 <div class="like">
-                    <img id="like1" src="img/heart_icon.png" alt="좋아요 아이콘"/>
+                    <img id="likeIcon" src="img/heart_icon.png" alt="좋아요 아이콘"/>
                     <span>좋아요</span>
                 </div>
                 <div class="share">
-                    <img id="share1" src="img/share_icon.png" alt="공유하기 아이콘"/>
+                    <img id="shareIcon" src="img/share_icon.png" alt="공유하기 아이콘"/>
                     <span>공유하기</span>
                 </div>
+                <!-- 좋아요, 공유하기 영역 END -->
             </div>
-
         </div>
+        <!-- 게시판 글 내용 END -->
     </div>
+    <!-- 게시글 내용을 담을 컨테이너 END -->
 </div>
+
+<!-- 댓글창 START -->
 <div class="comment_wrap">
     <h3 class="comment_count">댓글 수 : 3</h3>
-
-    <div class="comment_one">
+    <div class="comment">
         <img src="./img/유튜브_기본프로필/유튜브_기본프로필_파랑.jpg" alt="댓글 작성자 프로필 사진"/>
         <div class="comment_detail">
             <div class="nick">김철</div>
@@ -292,7 +387,7 @@
             </div>
         </div>
     </div>
-    <div class="comment_one">
+    <div class="comment">
         <img src="./img/유튜브_기본프로필/유튜브_기본프로필_주황.jpg" alt="댓글 작성자 프로필 사진"/>
         <div class="comment_detail">
             <div class="nick">해상수</div>
@@ -301,7 +396,7 @@
             </div>
         </div>
     </div>
-    <div class="comment_one">
+    <div class="comment">
         <img src="./img/유튜브_기본프로필/유튜브_기본프로필_녹색.jpg" alt="댓글 작성자 프로필 사진"/>
         <div class="comment_detail">
             <div class="nick">L9999</div>
@@ -311,9 +406,32 @@
             </div>
         </div>
     </div>
+    <!-- 댓글 쓰기 기능 START -->
+    <div class="comment_write_wrap">
+        <ul class="comment_write">
+            <li class="list-group-item">
+                <div class="replyIdPw">
+                    <label for="replyId">
+                        <img class="comment_icon" src="img/댓글/user_comment.png"  alt="댓글 기본 프로필"/>
+                        <input type="text" class="replyId" placeholder="닉네임" id="replyId">
+                    </label>
+                    <label for="replyPassword">
+                        <img class="comment_icon" src="img/댓글/lock.png" alt="lock"/>
+                        <input type="password" class="replyPassword" placeholder="비밀번호" id="replyPassword">
+                    </label>
+                </div>
+                <label for="commentContent">
+                    <textarea class="commentContent" id="commentContent" rows="3"></textarea>
+                </label>
+                <button type="button" class="replyButton">쓰기</button>
+            </li>
+        </ul>
+    </div>
+    <!-- 댓글 쓰기 기능 END -->
 </div>
-<!--푸터START-->
+<!-- 댓글창 END -->
 
+<!-- 푸터 START -->
 <footer>
     <div class="footer-container">
         <div class="footer-links">
@@ -338,7 +456,7 @@
             확인하시기 바랍니다.<br>당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
     </div>
 </footer>
-<!--푸터END-->
+<!--푸터 END -->
 </body>
 
 </html>

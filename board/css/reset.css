@@ -18,8 +18,5 @@ img {
 }
 
 body {
-/*    font-family: 'Verdana'; !* 글꼴 *!*/
     font-size: 16px; /* 글자 크기 */
-/*    color: black; !* 글자 색상 *!*/
-/*    line-height: 28px; !* 줄 간격 *!*/
 }

@@ -11,12 +11,15 @@
             font-weight: 600;
             src: url("./font/AppleSDGothicNeoSB.woff2") format("woff2");
         }
+
+        /* 전체 폰트 스타일 설정 */
         * {
             font-family: 'AppleSDGothicNeo', sans-serif;
         }
+
         .board_list_wrap {
             width: 1000px;
-            box-sizing: border-box;
+            /*box-sizing: border-box;*/
             padding: 50px;
             /*background-color: #f5f5f5;*/
 
@@ -30,6 +33,7 @@
 
         }
 
+        /* 게시판 셀 스타일 */
         .board_list th,
         .board_list td {
             /*border: 1px solid #999;*/
@@ -94,7 +98,6 @@
             margin-left: 0;
         }
 
-
         .board_list_wrap .paging a.num {
             border: 1px solid green;
             font-weight: 600;
@@ -128,7 +131,7 @@
             justify-content: center;
             /*background: green;*/
             flex-grow: 1; /* 검색바가 가능한 많은 공간을 차지하도록 함 */
-
+            margin-left: 100px;
         }
 
         .paging img {
@@ -150,7 +153,7 @@
             /*align-content: center;*/
             box-sizing: border-box;
             border: 1px solid black;
-            border-radius: 6px;
+            border-radius: 9px;
         }
 
         /* 검색 버튼 */
@@ -186,8 +189,7 @@
             margin-left: 0;
         }
 
-    /*    푸터 START*/
-
+        /* 푸터 START */
         footer {
             /*background-color: #f5f5f5;*/
             color: #333;
@@ -241,16 +243,68 @@
         .footer-btn:hover {
             background-color: #0056b3; /* 버튼 위에 마우스를 올렸을 때 색상 변경 */
         }
-    /*    푸터 END*/
+
+        /* 푸터 END */
+        /* 검색바 */
+        .search_field_container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 400px; /* 혹은 원하는 너비 */
+            height: 40px;
+        }
+
+        .search_input {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-radius: 6px;
+            padding-right: 50px; /* 아이콘에 의해 텍스트가 가려지지 않도록 padding 추가 */
+        }
+
+        .search_icon {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+            background-image: url('img/search-icon.svg');
+            background-size: cover;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .buttons > .button {
+            background: black;
+            color: white;
+            border-radius: 10px;
+            height: 40px;
+            margin-left: 10px; /* 버튼 간 여백 */
+            padding: 0 20px; /* 좌우 패딩 */
+            display: inline-block; /* 버튼처럼 보이게 만듬 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            line-height: 40px; /* 세로 중앙 정렬을 위해 높이와 같게 설정 */
+            text-decoration: none; /* 링크의 밑줄 제거 */
+        }
+
+        .buttons > .button:first-child {
+            margin-left: 0;
+        }
     </style>
 </head>
 <body>
-<div class="center_wrap"> <!-- 새로운 div 태그 추가 -->
-    <div class="board_list_wrap"> <!-- 게시판    -->
+
+<div class="center_wrap">
+    <!-- 게시판 종류, 게시판 영역, 페이지 영역, 검색바 영역을 감싸는 div 태그 -->
+    <div class="board_list_wrap">
+        <!-- 게시판 종류 -->
         <h1 class="category"><a href="#">자유 게시판</a></h1>
+        <!-- 게시판(테이블) 영역 START -->
         <table class="board_list">
             <caption>게시판 목록</caption>
             <thead>
+            <!-- 테이블 헤더 START -->
             <tr>
                 <th>번호</th>
                 <th>제목</th>
@@ -259,8 +313,10 @@
                 <th>추천</th>
                 <th>조회</th>
             </tr>
+            <!-- 테이블 헤더 END -->
             </thead>
             <tbody>
+            <!-- 테이블 내용 START -->
             <tr>
                 <td>10</td>
                 <td><a href="board_content.html">[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</a></td>
@@ -269,14 +325,13 @@
                 <td>15</td>
                 <td>303</td>
             </tr>
-
             <tr>
                 <td>9</td>
-                <td><a href="board_content.html">[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</a></td>
-                <td>관리자</td>
+                <td><a href="#">엘무드 오착</a></td>
+                <td>리즈</td>
                 <td>2024.03.26</td>
                 <td>15</td>
-                <td>303</td>
+                <td>309</td>
             </tr>
             <tr>
                 <td>8</td>
@@ -352,7 +407,10 @@
                 <td>1023</td>
             </tr>
             </tbody>
+            <!-- 테이블 내용 END -->
         </table>
+        <!-- 게시판(테이블) 영역 END -->
+        <!-- 페이지 영역 START -->
         <div class="paging">
             <img src="img/페이지아이콘/왼쪽 페이지.png" alt="이전 페이지"/>
             <a href="#" class="num on">1</a>
@@ -360,25 +418,34 @@
             <a href="#" class="num">3</a>
             <img src="img/페이지아이콘/우측 페이지.png" alt="다음 페이지"/>
         </div>
-
-        <!-- 검색바와 글쓰기, 인기글 버튼을 포함하는 div -->
+        <!-- 페이지 영역 END -->
+        <!-- 검색바와 글쓰기, 인기글 영역 START -->
         <div class="bottom_bar">
-            <!-- 검색바 -->
+            <!-- 검색바 START -->
             <div class="search_bar">
-                <label><input type="text" placeholder="검색어를 입력하세요."></label>
-                <button type="submit">검색</button>
+                <div class="search_field_container">
+                    <label>
+                        <input type="text" placeholder="검색어를 입력하세요." class="search_input">
+                    </label>
+                    <span class="search_icon"></span>
+                </div>
             </div>
-            <!-- 글쓰기, 인기글 버튼 -->
+            <!-- 검색바 END -->
+
+            <!-- 인기글, 글쓰기 START -->
             <div class="buttons">
-                <button type="button">인기글</button>
-                <button type="button">글쓰기</button>
+                <!-- 인기글 페이지로 이동하는 링크 -->
+                <a href="#" class="button">인기글</a>
+                <!-- 글쓰기 페이지로 이동하는 링크 -->
+                <a href="#" class="button">글쓰기</a>
             </div>
+            <!-- 인기글, 글쓰기 END -->
         </div>
+        <!-- 검색바와 글쓰기, 인기글 END -->
     </div>
 </div>
 
-<!--푸터START-->
-
+<!-- 푸터 START -->
 <footer>
     <div class="footer-container">
         <div class="footer-links">
@@ -403,7 +470,7 @@
             확인하시기 바랍니다.<br>당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
     </div>
 </footer>
-<!--푸터 END-->
+<!--푸터 END -->
 
 </body>
 </html>
