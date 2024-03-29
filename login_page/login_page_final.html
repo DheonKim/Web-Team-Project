@@ -13,15 +13,17 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f8f9fa;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
 
     .outer-container {
-      text-align: center;
-      margin: 0 auto;
+      /*text-align: center;*/
+        width: 1000px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
     }
 
     .login-container {
@@ -33,18 +35,14 @@
       text-align: center;
       transition: height 0.3s ease; /* 추가 */
     }
-    /*
-    .login-container.logged-in {
-      height: 300px; !* 수정 *!
-    }
-    */
+
      .login-container h1 {
        margin-bottom: 20px;
-       font-size: 10px; /* 원하는 사이즈로 조정 */
+       font-size: 10px;
        color: gray;
-       text-align: left; /* 왼쪽 정렬로 변경 */
-       padding-left: 20px; /* 왼쪽 여백 추가 */
-       box-sizing: border-box; /* padding과 margin을 포함한 전체 너비 지정 */
+       text-align: left;
+       padding-left: 20px;
+       box-sizing: border-box;
      }
 
     .login-container > img {
@@ -95,7 +93,6 @@
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      margin-bottom: 30px;
       margin: 0 auto;
     }
 
@@ -103,124 +100,57 @@
       background-color: #797979;
     }
 
+    .password-toggle {
+        position: absolute;
+        top: 50%;
+        right: 27px;
+        margin-top: 12px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 20px;
+        height: auto;
+    }
+
+
+    /*
+     additional options including auto login, finding id and pw.
+     */
     .additional-options {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 20px auto 10px; /* 수정 */
-      width: calc(100% - 35px); /* 수정 */
+      margin: 20px auto;
+      width: calc(100% - 35px);
     }
-
+    /*
     .auto-login-checkbox {
-      margin-right: 5px;
-        /*color: #808080;*/
-        font-size: 14px;
 
     }
+    .auto-login-checkbox input[type="checkbox"] {
+        margin-right: 5px;
+    }
+    */
 
     .forgot-password {
       font-size: 14px;
-      color: #808080; /* 회색 */
+      color: #808080;
       text-decoration: none;
     }
 
     .forgot-password:hover {
       text-decoration: none;
     }
+    /* additional options including auto login, finding id and pw. */
 
-    .password-toggle {
-      position: absolute;
-      top: 50%;
-      right: 27px;
-      margin-top: 12px;
-      transform: translateY(-50%);
-      cursor: pointer;
-      width: 20px;
-      height: auto;
-    }
+
     /*
-    .sns-login {
-        margin-top: 20px; !* 추가된 부분의 위쪽 여백 조정 *!
-    }
+    or divider
     */
-    .sns-login {
-        margin-top: 30px;
-        width: calc(100% - 40px); /* 부모 요소에 맞춰서 너비를 조정합니다. 여백은 위쪽과 아래쪽을 고려하여 총 40px입니다. */
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 15px;
-    }
-
-
-
-    .sns-login-box {
-        height: 50px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px; /* 각 박스 사이에 여백을 줍니다. */
-        border: 1px solid black;
-        /*border-radius: 30px;*/
-    }
-
-    .sns-login-box img {
-        width: 35px;
-        margin-right: 10px; /* 로고와 텍스트 사이 여백 조정 */
-        margin-left: 10px;
-    }
-
-    .sns-login-box span {
-        font-size: 14px;
-    }
-
-
-
-
-    .sns-login-horizontal {
-        display: flex;
-        justify-content: space-around;
-        /*justify-content: space-between;*/
-        width: calc(100% - 40px); /* 부모 요소에 맞추어 너비를 조정합니다. 여백은 좌우에 총 20px씩 있으므로 총 40px입니다. */
-        margin-top: 20px; /* 고정 간격 */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .sns-login-icon {
-        width: 50px; /* 아이콘 크기 조절 */
-        text-align: center; /* 아이콘 가운데 정렬 */
-    }
-
-
-    .sns-login-box {
-        display: flex;
-        align-items: center; /* 세로 가운데 정렬 */
-        justify-content: center; /* 가로 가운데 정렬 */
-        height: 50px;
-        margin-bottom: 10px;
-        border: 1px solid black;
-        /*border-radius: 30px;*/
-        cursor: pointer;
-
-    }
-
-    .sns-login-box img {
-        width: 35px;
-        margin-right: 10px; /* 로고와 텍스트 사이 여백 조정 */
-        margin-left: 10px;
-    }
-
-    .sns-login-box span {
-        font-size: 14px;
-        text-align: center; /* 텍스트를 가운데 정렬 */
-    }
-
-
     .or-divider {
-
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 30px auto 10px;
+        margin: 35px auto 35px;
         width: calc(100% - 40px);
     }
 
@@ -243,25 +173,73 @@
         color: #808080;
         margin: 0 10px;
     }
-    /* 방법 2
-    .separator {
-        margin: 10px auto;
-        width: calc(100% - 40px); !* 부모 요소의 너비에서 좌우 여백(10px)을 뺀 크기로 설정 *!
-        height: 1px; !* 선의 높이 *!
-        background-color: #ccc; !* 회색 선 *!
-    }
+    /* or divider */
+
+
+    /*
+    log in with account
     */
+    .sns-login {
+        width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+    }
 
+    .sns-login-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        /*border-radius: 30px;*/
+        cursor: pointer;
+    }
 
+    .sns-login-box img {
+        width: 25px;
+        margin-right: 10px;
+    }
 
+    .sns-login-box span {
+        font-size: 14px;
+        text-align: center;
+    }
 
+    .sns-login-box:hover {
+        background-color: rgb(222, 226, 230);
+    }
+    /* login with account */
+
+    /*
+    sign-up & Terms of Service & privacy policy link
+    */
+    .sign_up_link {
+        color: #808080;
+        margin-top: 50px;
+    }
+    .sign_up_link > div {
+        margin: 10px 0 5px 0;
+    }
+    .sign_up_link a {
+        color: black;
+    }
+    .sign_up_link a:hover {
+        text-decoration: underline;
+    }
+
+    .sign_up_link div:nth-last-child(1) {
+        font-size: 12.5px;
+    }
+    /* sign-up & Terms of Service & privacy policy link */
   </style>
 </head>
 <body>
 <div class="outer-container">
   <div class="login-container">
-    <img src = "img/MUSINSA_logo_230425_ver/무신사_B.png" alt="무신사 로고">
-    <h1>LOGIN OR CREATE ACCOUNT</h1>
+    <img src = "./img/MUSINSA_logo_230425_ver/무신사_B.png" alt="무신사 로고">
+    <h1>LOGIN</h1>
     <form action="#" method="post">
       <div class="input-label">아이디 입력</div>
       <div class="input-group" id="usernameGroup">
@@ -273,7 +251,7 @@
 
         <label for="password">비밀번호</label>
         <input type="password" name="password" id="password" placeholder="비밀번호" required>
-        <img src="./img/view.png" class="password-toggle" id="passwordToggle" alt="비밀번호 표시">
+        <img src="img/view.png" class="password-toggle" id="passwordToggle" alt="비밀번호 표시">
       </div>
       <button type="button" class="btn-login" id="continueButton">Continue</button>
       <button type="submit" class="btn-login" id="loginButton" style="display: none;">로그인</button>
@@ -286,48 +264,43 @@
         </div>
       </div>
 
-
         <div class="or-divider">
             <hr class="or-line">
             <span class="or-text">OR</span>
             <hr class="or-line">
         </div>
 
-
-
-
-
         <div class="sns-login">
             <div class="sns-login-box">
-                <img src="./img/login_logo/google_logo.png" alt="Google 로고">
-                <span>Google 로그인</span>
+                <img src="img/login_logo/google_logo.png" alt="Google 로고">
+                <span>Continue With Google</span>
             </div>
             <div class="sns-login-box">
-                <img src="./img/login_logo/facebook_logo.png" alt="Facebook 로고">
-                <span>Facebook 로그인</span>
+                <img src="img/login_logo/facebook_logo.png" alt="Facebook 로고">
+                <span>Continue With Facebook</span>
             </div>
             <div class="sns-login-box">
-                <img src="./img/login_logo/apple_logo_v2.png" alt="apple 로고">
-                <span>apple 로그인</span>
+                <img src="img/login_logo/apple_logo_v2.png" alt="apple 로고">
+                <span>Continue With Apple</span>
             </div>
             <div class="sns-login-box">
-                <img src="./img/login_logo/naver_logo.png" alt="Naver 로고">
-                <span>Naver 로그인</span>
+                <img src="img/login_logo/naver_logo.png" alt="Naver 로고">
+                <span>Continue With Naver</span>
             </div>
         </div>
 
-<!--
-
-        <div class="sns-login-horizontal">
-            <div class="sns-login-icon"><img src="https://via.placeholder.com/50" alt="Google 로고"></div>
-            <div class="sns-login-icon"><img src="https://via.placeholder.com/50" alt="Facebook 로고"></div>
-            <div class="sns-login-icon"><img src="https://via.placeholder.com/50" alt="Kakao 로고"></div>
-            <div class="sns-login-icon"><img src="https://via.placeholder.com/50" alt="Naver 로고"></div>
+        <div class="sign_up_link">
+            <div>
+                <span>Not a member? <a href="sign_up_page_final.html"> Sign up</a></span>
+            </div>
+            <div>
+                <span>By proceeding, you agree to <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.</span>
+            </div>
         </div>
---> <!-- horizontal icon -->
-
     </form>
+
   </div>
+
 </div>
 
 
@@ -339,6 +312,7 @@
   const usernameGroup = document.getElementById('usernameGroup');
   const passwordGroup = document.getElementById('passwordGroup');
   const passwordToggle = document.getElementById('passwordToggle');
+/*
 
   continueButton.addEventListener('click', function() {
     if (usernameInput.value.trim() !== '') {
@@ -351,6 +325,36 @@
       }, 10);
     }
   });
+*/
+  continueButton.addEventListener('click', function() {
+      if (usernameInput.value.trim() !== '') {
+          passwordGroup.style.display = 'block'; // 비밀번호 입력 필드 표시
+          loginButton.style.display = 'block'; // 로그인 버튼 표시
+          continueButton.style.display = 'none'; // 계속하기 버튼 숨김
+          usernameGroup.style.marginTop = '0'; // 아이디 입력 필드의 상단 여백 조정
+          setTimeout(() => {
+              passwordGroup.style.marginTop = '20px'; // 비밀번호 입력 필드의 상단 여백 조정
+          }, 10);
+      }
+  });
+
+  // loginButton.addEventListener('click', function() {
+  //     // 사용자가 비밀번호를 입력하고 로그인 버튼을 클릭했을 때 실행되는 로직
+  //     // 실제로는 서버와 통신하여 로그인을 처리해야 하지만, 이 코드에서는 리디렉션만 수행합니다.
+  //     window.location.href = './main/frontend_project/main.html'; // 메인 페이지로 이동
+  // });
+  /*
+  로그인 버튼 클릭 시 페이지 새로고침 방지하기 위해 JavaScript 이벤트 객체의 preventDefault() 메서드 사용.
+  이벤트의 기본 동작 취소. 클릭 이벤트가 발생할 때 기본 동작인 페이지 새로고침을 막는 역할
+
+   클릭 이벤트가 발생할 때 기본 동작 차단, 메인 페이지로의 이동 실행.
+   로그인 버튼이 클릭되었을 때 페이지가 새로고침되는 문제 해결 가능.
+   */
+  loginButton.addEventListener('click', function(event) {
+      event.preventDefault(); // 기본 이벤트 차단
+      console.log('로그인 버튼 클릭됨'); // 버튼 클릭 이벤트 확인용 로그
+      window.location.href = '../main/frontend_project/main.html'; // 메인 페이지로 이동
+  });
 
   passwordToggle.addEventListener('click', function() {
     if (passwordInput.type === 'password') {
@@ -360,6 +364,10 @@
       passwordInput.type = 'password';
       passwordToggle.src = './img/view.png';
     }
+  });
+  loginButton.addEventListener('click', function() {
+      console.log('로그인 버튼 클릭됨'); // 버튼 클릭 이벤트 확인용 로그
+      window.location.href = '../main/frontend_project/main.html'; // 메인 페이지로 이동
   });
 </script>
 </body>
