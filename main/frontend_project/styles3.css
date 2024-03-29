@@ -1,5 +1,5 @@
 
-/*                                 section3, section4                        */
+/*                                 section3, section4, section5                        */
 .section4{
     margin-top: 150px;
 }
@@ -36,12 +36,65 @@
     align-items: center; /* 세로 방향으로 중앙 정렬 */
     margin: 15px; /* 외부 여백 추가 */
 }
-.child-div a {
-    cursor: pointer;
+.child-div a { /* 링크 스타일 */
+    cursor: pointer; /* 커서를 포인터로 변경 */
 }
-.child-div a img {
-    width: 175px;
-    height: auto;
+.child-div a img { /* 이미지 스타일 */
+    width: 175px; /* 이미지 너비를 175px로 설정 */
+    height: auto; /* 이미지 높이를 원래 비율에 맞게 설정 */
+}
+.section5 .parent-div { /* 부모 div 스타일 */
+    display: flex; /* Flexbox 레이아웃을 사용 */
+}
+.section5 .child-div { /* 자식 div 스타일 */
+    flex: 1; 
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+}
+.section5 .child-div h3 {
+    margin-bottom: 10px; /* 제목과 목록 사이의 간격을 10px로 설정 */
+}
+.section5 .child-div ul { /* 목록 스타일 */
+    list-style-type: none; /* 목록의 기본 스타일을 제거 */
+    padding: 0; /* 내부 여백을 0으로 설정 */
+    margin-top: -10px; /* 목록의 위쪽 여백을 -10px로 설정하여 위쪽으로 이동 */
+}
+.section5 .child-div a img { /* 이미지 스타일 */
+    max-width: 370px; /* 이미지 최대 너비를 370px로 설정 */
+    max-height: 247px; /* 이미지 최대 높이를 247px로 설정 */
+    margin-left: -30px; /* 이미지 왼쪽 여백을 -10px로 설정하여 왼쪽으로 이동 */
+    width: 100%; /* 이미지 너비를 div의 너비에 맞게 설정 */
+    height: auto; /* 이미지 높이를 원래 비율에 맞게 설정 */
+    cursor: pointer; /* 커서를 포인터로 변경 */
+}
+.section5 .child-div a .arrow-left, .section5 .child-div a .arrow-right {
+    width: 30px; /* 화살표 이미지 너비를 30px로 설정 */
+    height: auto; /* 화살표 이미지 높이를 원래 비율에 맞게 설정 */
+    position: absolute; /* 화살표 이미지 위치를 절대 위치로 설정 */
+    top: 50%; /* 화살표 이미지를 상하 중앙에 위치 */
+    transform: translateY(-50%); /* 화살표 이미지를 상하 중앙에 위치 */
+    opacity: 0; /* 화살표 이미지를 기본적으로 보이지 않게 설정 */
+    transition: opacity 0.3s; /* 화살표 이미지의 투명도를 0.3초 동안 변화 */
+}
+
+.section5 .child-div a .arrow-left {
+    left: -10px; /* 왼쪽 화살표 이미지를 왼쪽으로 40px 이동 */
+    transform: rotate(180deg) translateY(-50%); /* 왼쪽 화살표 이미지를 왼쪽으로 바라보게 회전 */
+}
+
+.section5 .child-div a .arrow-right {
+    right: -10px; /* 오른쪽 화살표 이미지를 오른쪽으로 30px 이동 */
+    
+}
+
+.section5 .child-div:hover .arrow-left, .section5 .child-div:hover .arrow-right {
+    opacity: 1; /* 커서가 child-div 위에 있을 때 화살표 이미지를 보이게 설정 */
+}
+
+.section5 .child-div {
+    position: relative; /* child-div를 화살표 이미지의 위치를 기준으로 설정 */
+}
+.section5 .child-div a p {
+    margin-left: 30px; /* p 태그의 왼쪽 마진을 10px로 설정하여 오른쪽으로 이동 */
 }
 #parent-info{
     margin-top: 30px;
@@ -134,4 +187,11 @@
 
 .right-arrow { /* 오른쪽 화살표 스타일 */
     right: 0; /* 오른쪽 위치를 0으로 설정 */
+}
+
+.named {
+    font-size: 14px;
+} 
+.price {
+    font-size: 12px
 }
