@@ -262,7 +262,7 @@ div.comment_content {
     /* 기존 스타일 유지 */
     display: flex;
     flex-direction: column;
-    align-items: center; /* 댓글 입력 요소들을 중앙 정렬 */
+    align-items: center; /* comment 입력 요소들을 중앙 정렬 */
 }
 
 /* 텍스트 영역 스타일 조정 */
