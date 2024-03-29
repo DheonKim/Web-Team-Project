@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="css/footer_style.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .outer-container {
+            width: 1000px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .sign_up_container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+            transition: height 0.3s ease;
+        }
+
+        .sign_up_container h1 {
+            margin-bottom: 20px;
+            font-size: 10px;
+            color: gray;
+            text-align: left;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .sign_up_container a img {
+            width: 200px;
+            margin: 30px 0 50px 0;
+            display: inline;
+        }
+
+        .input-label {
+            font-size: 10px;
+            color: gray;
+            text-align: left;
+            margin-bottom: 5px;
+            margin-left: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+            transition: margin-top 0.3s ease;
+        }
+
+
+        .input-group label {
+            display: none;
+        }
+
+        .input-group input {
+            width: calc(100% - 35px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #000000;
+        }
+
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 27px;
+            margin-top: 2px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 20px;
+            height: auto;
+        }
+
+        /*
+        email_agreement and checkbox
+        */
+        .email_agreement {
+            display: flex;
+            margin: 10px auto; /* 간격을 조절하기 위해 margin 수정 */
+            width: calc(100% - 35px);
+            font-size: 14px;
+            align-items: center;
+        }
+        .email_agreement input[type="checkbox"] {
+            margin-right: 5px; /* 체크박스 오른쪽에 간격을 추가하기 위해 margin-right 수정 */
+        }
+        /* email_agreement and checkbox */
+
+
+        .btn-continue, .btn-login {
+            width: calc(100% - 35px);
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 15px 0 10px 0;
+        }
+        .btn-continue {
+            margin-top: 0;
+        }
+
+        .btn-continue:hover, .btn-login:hover {
+            background-color: #797979;
+        }
+
+        .or-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 35px auto 35px;
+            width: calc(100% - 40px);
+        }
+
+        .or-line,
+        .or-text {
+            flex-grow: 1;
+        }
+
+        .or-line {
+            margin: 0 10px;
+        }
+
+        .or-line {
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        .or-text {
+            font-size: 12px;
+            color: #808080;
+            margin: 0 10px;
+        }
+
+        .sns-login {
+            width: calc(100% - 40px);
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+        }
+
+        .sns-login-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .sns-login-box img {
+            width: 25px;
+            margin-right: 10px;
+        }
+
+        .sns-login-box span {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .sns-login-box:hover {
+            background-color: rgb(222, 226, 230);
+        }
+
+        .sign_up_link {
+            color: #808080;
+            margin-top: 50px;
+        }
+
+        .sign_up_link > div {
+            margin: 10px 0 5px 0;
+        }
+
+        .sign_up_link a {
+            color: black;
+        }
+
+        .sign_up_link a:hover {
+            text-decoration: underline;
+        }
+
+        .sign_up_link div:nth-last-child(1) {
+            font-size: 12.5px;
+        }
+    </style>
+</head>
+<header>
+    <div class="header_main-container">
+        <div class="header_area1">
+            <div class="header_text_box1">
+                <ul>
+                    <li>고객서비스</li>
+                    <li>매거진</li>
+                    <li>매장찾기</li>
+                    <li>ººº</li>
+                </ul>
+            </div>
+            <div class="header_logo">
+                <a href="../main/frontend_project/main_test1.html"><img src="./img/logo.jpg" style="width: 230px; height:180px;"></a>
+            </div>
+            <div class="header_text_box2">
+                <ul>
+                    <li>장바구니(0)</li>
+                    <li>즐겨찾기</li>
+                    <li><a href="../login_page/login_page_final.html">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header_main-container2">
+        <div class="header_area2">
+            <div class="header_top10">
+                <button class="header_brand-button">브랜드 TOP 10</button>
+            </div>
+            <div class="header_category">
+                <ul>
+                    <li>Man</li>
+                    <li>Woman</li>
+                    <li>Style</li>
+                    <li><a href="../board/board_page.html">Community</a></li>
+                    <li>Special</li>
+                    <li>Magazine</li>
+                </ul>
+            </div>
+            <div class="header_search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="제품 검색">
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+<div class="outer-container">
+    <div class="sign_up_container">
+        <a href="../main/frontend_project/main.html">
+            <img src="img/MUSINSA_logo_230425_ver/musinsa_B.png" alt="무신사 로고">
+        </a>
+        <h1>CREATE AN ACCOUNT</h1>
+        <!-- Continue 버튼을 클릭했을 때 보여줄 부분 -->
+        <form action="#" method="post" id="signUpForm">
+            <!-- 아이디 입력 -->
+            <div class="input-label">아이디 입력</div>
+            <div class="input-group" id="nameGroup">
+                <label for="name">아이디</label>
+                <input type="text" name="name" id="name" placeholder="아이디" required>
+            </div>
+            <!-- 이벤트에 의해 표시될 부분 -->
+            <div id="additionalFields" style="display: none;">
+                <!-- 비밀번호 입력 -->
+                <div class="input-label">비밀번호 입력</div>
+                <div class="input-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" name="password" id="password" placeholder="비밀번호" required>
+                    <img src="img/view.png" class="password-toggle" id="passwordToggle" alt="비밀번호 표시">
+                </div>
+                <!-- 이메일 주소 입력 -->
+                <div class="input-label">이메일 주소 입력</div>
+                <div class="input-group">
+                    <label for="email">이메일 주소</label>
+                    <input type="email" name="email" id="email" placeholder="이메일 주소" required>
+                </div>
+                <!-- 이메일 동의 체크박스 -->
+                <label for="agreeTerms" class="email_agreement">
+                    <input type="checkbox" id="agreeTerms">Email me with news and updates.
+                </label>
+                <!-- 회원가입 버튼 -->
+                <button type="submit" class="btn-login" id="createAccountButton">회원가입</button>
+            </div>
+        </form>
+        <!-- Continue 버튼 -->
+        <button class="btn-continue" id="continueButton">Continue</button>
+
+        <div class="or-divider">
+            <hr class="or-line">
+            <span class="or-text">OR</span>
+            <hr class="or-line">
+        </div>
+
+        <div class="sns-login">
+            <div class="sns-login-box">
+                <img src="img/login_logo/google_logo.png" alt="Google 로고">
+                <span>Continue With Google</span>
+            </div>
+            <div class="sns-login-box">
+                <img src="img/login_logo/facebook_logo.png" alt="Facebook 로고">
+                <span>Continue With Facebook</span>
+            </div>
+            <div class="sns-login-box">
+                <img src="img/login_logo/apple_logo_v2.png" alt="apple 로고">
+                <span>Continue With Apple</span>
+            </div>
+            <div class="sns-login-box">
+                <img src="img/login_logo/naver_logo.png" alt="Naver 로고">
+                <span>Continue With Naver</span>
+            </div>
+        </div>
+
+        <div class="sign_up_link">
+            <div>
+                <span>Already registered?<a href="login_page_final.html"> Log in</a></span>
+            </div>
+            <div>
+                <span>By proceeding, you agree to <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const continueButton = document.getElementById('continueButton');
+        const additionalFields = document.getElementById('additionalFields');
+        const createAccountButton = document.getElementById('createAccountButton');
+        const passwordToggle = document.getElementById('passwordToggle');
+
+        // Continue 버튼 클릭 시 이벤트 처리
+        continueButton.addEventListener('click', function() {
+            // 아이디가 입력되어 있는지 확인
+            if (nameInput.value.trim() !== '') {
+                // 아이디가 입력된 경우, 추가 필드를 보여줌
+                additionalFields.style.display = 'block';
+                // Continue 버튼을 사라지게 함
+                continueButton.style.display = 'none';
+            } else {
+                // 아이디가 입력되지 않은 경우, 알림창을 표시
+                alert('아이디를 먼저 입력하세요.');
+            }
+        });
+
+        // 회원가입 버튼 클릭 시 이벤트 처리
+        createAccountButton.addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 동작 방지
+            // 사용자 입력 유효성 검사
+            if (validateInputs()) {
+                // 사용자 입력이 유효한 경우, 회원가입을 처리하는 함수 호출
+                signUp();
+            }
+        });
+
+        // 비밀번호 표시/감추기 토글 기능
+        passwordToggle.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggle.src = './img/hide.png';
+            } else {
+                passwordInput.type = 'password';
+                passwordToggle.src = './img/view.png';
+            }
+        });
+
+        // 사용자 입력 유효성 검사 함수
+        function validateInputs() {
+            // 각 입력 필드의 값이 비어 있는지 확인
+            if (nameInput.value.trim() === '') {
+                alert('이름을 입력하세요.');
+                return false;
+            }
+            if (emailInput.value.trim() === '') {
+                alert('이메일 주소를 입력하세요.');
+                return false;
+            }
+            if (passwordInput.value.trim() === '') {
+                alert('비밀번호를 입력하세요.');
+                return false;
+            }
+            return true;
+        }
+
+        // 회원가입 처리 함수
+        function signUp() {
+            // 여기에 회원가입을 위한 서버 요청 등의 로직을 추가할 수 있습니다.
+            alert('회원가입이 완료되었습니다!');
+            // 회원가입이 완료되면 다음 단계로 이동하거나 홈페이지로 리디렉션할 수 있습니다.
+            // 메인 페이지로 리디렉션합니다.
+            window.location.href = "../main/frontend_project/main_test1.html";
+        }
+    });
+
+    // 회원가입 처리 함수
+
+</script>
+</body>
+<!-- 푸터 START -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <ul class="footer-links">
+                <li><a href="#" class="footer-btn">회사소개</a></li>
+                <li><a href="#" class="footer-btn">인재채용</a></li>
+                <li><a href="#" class="footer-btn">제휴제안</a></li>
+                <li><a href="#" class="footer-btn">이용약관</a></li>
+                <li><a href="#" class="footer-btn">개인정보처리방침</a></li>
+            </ul>
+        </div>
+        <p class="copyright"><strong>COPYRIGHT (C) MUSINSA ALL RIGHTS RESERVED.</strong></p>
+        <p>무신사닷컴 내 매거진, 스트리트스냅, 스토어 등 무신사 자체 생성 콘텐츠는 무신사닷컴 및 무신사 계약업체에 저작권이 있습니다.<br> 이러한 콘텐츠는 출처를 밝히고 비상업적인 용도에서만 활용하실
+            수 있습니다.</p>
+        <p>커뮤니티 및 중고장터, 댓글 등 무신사 회원이 올린 이미지가 저작권에 위배될 경우 신고하시면 검토 후 삭제하겠습니다.</p>
+        <p>10 0% AUTHENTIC: 무신사스토어에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.</p>
+        <div class="footer-address">
+            <p>주식회사 무신사 (MUSINSA Co., Ltd.) | 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 무신사캠퍼스 엔1) | 사업자등록번호 : 211-88-79575 |
+                통신판매업신고 : 2022-서울성동-01952 | 대표 : 한문일 | 개인정보 보호책임자 : 정광은 | 호스팅사업자 : (주)무신사</p>
+        </div>
+        <p id="notice">일부 상품의 경우 주식회사 무신사는 통신판매의 당사자가 아닌 통신판매중개자로서 상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을
+            확인하시기 바랍니다.<br>당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
+    </div>
+</footer>
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<!--푸터 END -->
+</html>

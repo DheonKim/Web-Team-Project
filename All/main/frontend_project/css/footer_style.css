@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-weight: 600;
+    src: url("../font/AppleSDGothicNeoSB.woff2") format("woff2");
+}
+
+* {
+    font-family: 'AppleSDGothicNeo', sans-serif;
+}
+
+footer {
+    /*background-color: #f5f5f5;*/
+    color: #333;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    /*background-color: #f5f5f5;*/
+}
+
+.footer-address {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center; /* 가로 정렬을 중앙으로 설정 */
+    flex-wrap: wrap; /* 내용이 넘치면 다음 줄로 이동 */
+}
+
+.footer-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 0 10px; /* 좌우 마진을 조정하여 버튼 사이 간격 설정 */
+}
+
+.footer-btn {
+    background-color: #eee;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block; /* 버튼이 옆으로 배열되도록 설정 */
+    transition: background-color 0.3s;
+}
+
+.footer-btn:hover {
+    background-color: #0056b3; /* 버튼 위에 마우스를 올렸을 때 색상 변경 */
+}

@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none; /* 링크 속성 글자 밑줄 없앰 */
+    color: inherit;
+}
