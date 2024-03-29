@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
+}
+main{
+    padding: 0 100px;
+    
+}
 
 a{
     text-decoration: none;
@@ -22,4 +29,9 @@ div{
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
+}
+.container{
+    overflow: hidden;
+    min-width: 1000px;
+    font-family:  "Noto Sans KR", sans-serif;
 }

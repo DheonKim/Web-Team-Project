@@ -13,16 +13,16 @@ const countdownfunction = setInterval(function() {
     let distance = countDownDate - now;
 
     // 시간, 분, 초 계산
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24)); 
     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // 결과를 "section2Header_timer" 요소에 출력
     document.getElementById("section2Header_timer").innerHTML =
-    '<div>' + days  + "<span>d</span></div>" + 
-    '<div>' + hours + "<span>h</span></div>" +     
-    '<div>' + minutes + "<span>m</span></div>" + 
+    '<div>' + days  + "<span>D</span></div>" + 
+    '<div>' + hours + "<span>h :</span></div>" +     
+    '<div>' + minutes + "<span>m :</span></div>" + 
     '<div>' + seconds + "<span>s</span></div>";
 
     // 카운트다운이 끝나면 메시지 출력
