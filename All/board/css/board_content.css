@@ -168,7 +168,7 @@ div.comment_content {
     width: 800px;
     /*border: 1px solid #999;*/
     border-radius: 6px;
-    background: rgba(188, 214, 243, 0.43);
+    background: rgba(121, 121, 121, 0.1);
     padding: 15px;
     box-sizing: border-box;
     margin: 30px auto;
