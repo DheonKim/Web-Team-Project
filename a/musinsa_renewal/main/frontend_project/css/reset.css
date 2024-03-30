@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
+}
+main{
+    padding: 0 100px;
+    
+}
+
+a{
+    text-decoration: none;
+
+}
+
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+div{
+    display: block;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+.container{
+    overflow: hidden;
+    min-width: 1000px;
+    font-family:  "Noto Sans KR", sans-serif;
+}

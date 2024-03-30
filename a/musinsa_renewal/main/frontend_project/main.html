@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main_test1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="css/styles3.css">
+    <link href="css/footer_style.css" rel="stylesheet">
+    <style>
+        body>.main_header,
+        body>nav {
+            box-sizing: border-box;
+            /* padding과 border가 width에 포함되도록 설정 */
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        body>section {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        body>h2 {
+            /*height: 100px; !* 높이를 지정해서 레이아웃 영역 확인 *!*/
+            /*background: #f06;*/
+            padding: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+        }
+
+        body>header {
+            height: 100px;
+            /* 높이를 지정해서 레이아웃 영역 확인 */
+            background: #ffffff;
+        }
+
+        body>nav {
+            height: 100px;
+            /* 높이를 지정해서 레이아웃 영역 확인 */
+            background: #0f6;
+        }
+    </style>
+</head>
+<header>
+    <div class="header_main-container">
+        <div class="header_area1">
+            <div class="header_text_box1">
+                <ul>
+                    <li>고객서비스</li>
+                    <li>매거진</li>
+                    <li>매장찾기</li>
+                    <li>ººº</li>
+                </ul>
+            </div>
+            <div class="header_logo">
+                <a href="main.html"><img src="./img/logo.jpg" style="width: 230px; height:180px;"></a>
+            </div>
+            <div class="header_text_box2">
+                <ul>
+                    <li>장바구니(0)</li>
+                    <li>즐겨찾기</li>
+                    <li><a href="../../login_page/login_page_final.html">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header_main-container2">
+        <div class="header_area2">
+            <div class="header_top10">
+                <button class="header_brand-button">브랜드 TOP 10</button>
+            </div>
+            <div class="header_category">
+                <ul>
+                    <li>Man</li>
+                    <li>Woman</li>
+                    <li>Style</li>
+                    <li><a href="../../board/board_page.html">Community</a></li>
+                    <li>Special</li>
+                    <li>Magazine</li>
+                </ul>
+            </div>
+            <div class="header_search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="제품 검색">
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <style>
+        body>section:nth-of-type(1) {
+            width: 1000px;
+            height: auto;
+            background: none;
+            display: flex;
+            margin-top: 100px;
+        }
+    </style>
+    <main class="container">
+        <section>
+            <div class="banner1"><img src="img/banner1.jpg" alt="최상단 배너"></div>
+        </section>
+
+
+        <section class="section2" data-personal-yn="N">
+            <header class="main_contantsHeader">
+                <h2 class="main_contantsHeader_title" style="background-color: #fff;">
+                    <span class="main_contantsHeader_title_top-txt" style="color:#aaa">단 7일간만! 프라임 브랜드 위크에서 제공하는</span>
+                    <span style="color: black;">서프라이즈 혜택</span>
+                </h2>
+                <div id="section2Header_timer" data-time="04/02/2024 00:00"
+                    style="background-color: #fff; color:#0078FF">
+                </div>
+                <script src="js/styles2js.js"></script>
+            </header>
+            <div style="margin-bottom: -50px;">
+                <div class="list_containerCircle">
+                    <div class="list_itemCircle">
+                        <div class="banner">
+                            <a href="#" class="banner_thumbnail"><img src="img/sale1.jpg" alt="세일썸네일"></a>
+                            <div class="banner_info">
+                                <span class="banner_txt1">최대 60% 할인</span>
+                                <span class="banner_txt2">자세히 보기 ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_itemCircle">
+                        <div class="banner">
+                            <a href="#" class="banner_thumbnail"><img src="img/copon1.jpg" alt="쿠폰썸네일"></a>
+                            <div class="banner_info">
+                                <span class="banner_txt1">최대 15% 쿠폰</span>
+                                <span class="banner_txt2">자세히 보기 ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_itemCircle">
+                        <div class="banner">
+                            <a href="#" class="banner_thumbnail"><img src="img/free1.jpg" alt="무료반품썸네일"></a>
+                            <div class="banner_info">
+                                <span class="banner_txt1">무료 반품</span>
+                                <span class="banner_txt2">자세히 보기 ></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="section3">
+            <header class="main_contantsHeader">
+                <h2 class="main_contantsHeader_title">
+                    <span class="main_contantsHeader_title_top-txt" style="color: black;">브랜드가 직접 셀렉한</span>
+                    <span style="color: black;">베스트 Top 10</span>
+                </h2>
+            </header>
+            <div class="parent-div"> <!-- 부모 요소에 클래스 추가 -->
+                <div class="arrow left-arrow"><img src="img/arrow.png" alt="화살표_l"></div>
+                <a href="https://www.musinsa.com/app/goods/3390511" class="content">
+                    <div class="image-div">
+                        <img class="img1"
+                            src="https://image.msscdn.net/images/goods_img/20230630/3390511/3390511_16927655423045_500.jpg"
+                            alt="옷이미지1">
+                    </div>
+                    <div class="info-div">
+                        <h2 class="brand">스탠다드에러</h2>
+                        <p class="product-name">87-STAN009 [비건 스웨이드] 스탠다드 블루종 스웨이드 자켓 카키</p>
+                        <p class="original-price"><del>133,000원</del></p>
+                        <div class="price-container">
+                            <p class="discounted-price">39,900원</p> <!-- '할인된 가격'을 '39,900원'으로 변경 -->
+                            <p class="discount-rate">70%</p> <!-- '할인율'을 '70%'로 변경 -->
+                        </div>
+                        <p class="go-to-product">상품 보러가기 ></p>
+                    </div>
+                </a>
+                <div class="arrow right-arrow"><img src="img/arrow.png" alt="화살표_r"></div>
+            </div>
+        </section>
+
+        <section class="section4">
+            <header class="main_contantsHeader">
+                <h2 class="main_contantsHeader_title" style="background-color: #fff;">
+                    <span class="main_contantsHeader_title_top-txt" style="color:#aaa">무신사 스토어에 입점한 브랜드의 스태프가 직접 등록하는
+                        스타일 스냅입니다.<br>
+                        댓글을 통해 브랜드와 직접 소통도 가능합니다.</span>
+                    <span style="color: black;">브랜드 솔루션</span>
+                </h2>
+
+                <nav>
+                    <!-- 네비게이션 메뉴 버튼 -->
+                    <button class="nav-button">브랜드 스냅</button>
+                    <button class="nav-button">코디숍</button>
+                    <button class="nav-button">코디맵</button>
+                    <button class="nav-button">브랜드 룩북</button>
+                </nav>
+            </header>
+            <div class="parent-div" id="parent-info">
+                <div class="arrow left-arrow"><img src="img/arrow.png" alt="화살표_l"></div>
+                <!-- 자식 div들을 생성 -->
+                <div class="child-div">
+                    <a href="https://www.musinsa.com/mz/brandsnap/view/401657">
+                        <img src="img/brand_cody.jpg" alt="브랜드 스냅 이미지1">
+
+                        <h2 class="named" style="color: black;"><b>무신사 스탠다드</b> 우먼즈 데님 미니 랩</h2>
+                    </a>
+                    <p class="price" style="color: black;">27,800원</p>
+                </div>
+                <div class="child-div">
+                    <a href="https://www.musinsa.com/mz/brandsnap/view/401759">
+                        <img src="img/brand_cody2.jpg" alt="브랜드 스냅 이미지 2">
+                        <h2 class="named" style="color: black;"><b>브랜디드</b>1710 SAVAGE WARRIOR</h2>
+                    </a>
+                    <p class="price">115,200원</p>
+                </div>
+                <div class="child-div">
+                    <a href="https://www.musinsa.com/mz/brandsnap/view/401239">
+                        <img src="img/brand_cody3.jpg" alt="브랜드 스냅 이미지 3">
+                        <h2 class="named" style="color: black;">바시티 투웨이 집업 니트 [그레이]</h2>
+                    </a>
+                    <p class="price" style="color: black;">39,200원</p>
+                </div>
+                <div class="child-div">
+                    <a href="https://www.musinsa.com/mz/brandsnap/view/401162.html">
+                        <img src="img/brand_cody4.jpg" alt="브랜드 스냅 이미지 4">
+                        <h2 class="named" style="color: black;">TY 스탠다드 타이_Black</h2>
+                    </a>
+                    <p class="price" style="color: black;">25,000원</p>
+                </div>
+                <div class="arrow right-arrow"><img src="img/arrow.png" alt="화살표_r"></div>
+            </div>
+        </section>
+        <section class="section5">
+            <header class="main_contantsHeader">
+                <h2 class="main_contantsHeader_title">
+                    <span class="main_contantsHeader_title_top-txt" style="color: black;">최신 쇼핑 이슈를 확인해보자!</span>
+                    <span style="color: black;">매거진</span>
+                </h2>
+            </header>
+            <div class="parent-div">
+                <div class="child-div">
+                    <h3>쇼핑 이슈</h3>
+                    <ul>
+                        <li>스타일</li>
+                        <li>코디</li>
+                        <li>아이템</li>
+                        <li>리포트</li>
+                        <li>피플</li>
+                    </ul>
+                </div>
+                <div class="child-div">
+                    <a href="https://www.musinsa.com/app/plan/views/49631">
+                        <img src="img/arrow.png" class="arrow-left" alt="Left Arrow">
+                        <img src="img/magazine1.jpg" alt="Image 1">
+                        <p><b>호이테 2024SS 신상품 발매</b></p>
+                    </a>
+                </div>
+                <div class="child-div">
+                    <a href="https://www.musinsa.com/cms/magazine/view/10956">
+                        <img src="img/magazine2.png" alt="Image 2">
+                        <img src="img/arrow.png" class="arrow-right" alt="Right Arrow">
+                        <p><b>출근 룩이든, 하객 룩이든 블루종으로 해결!</b></p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<!-- 푸터 START -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <ul class="footer-links">
+                <li><a href="#" class="footer-btn">회사소개</a></li>
+                <li><a href="#" class="footer-btn">인재채용</a></li>
+                <li><a href="#" class="footer-btn">제휴제안</a></li>
+                <li><a href="#" class="footer-btn">이용약관</a></li>
+                <li><a href="#" class="footer-btn">개인정보처리방침</a></li>
+            </ul>
+        </div>
+        <p class="copyright"><strong>COPYRIGHT (C) MUSINSA ALL RIGHTS RESERVED.</strong></p>
+        <p>무신사닷컴 내 매거진, 스트리트스냅, 스토어 등 무신사 자체 생성 콘텐츠는 무신사닷컴 및 무신사 계약업체에 저작권이 있습니다.<br> 이러한 콘텐츠는 출처를 밝히고 비상업적인 용도에서만 활용하실
+            수 있습니다.</p>
+        <p>커뮤니티 및 중고장터, 댓글 등 무신사 회원이 올린 이미지가 저작권에 위배될 경우 신고하시면 검토 후 삭제하겠습니다.</p>
+        <p>10 0% AUTHENTIC: 무신사스토어에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.</p>
+        <div class="footer-address">
+            <p>주식회사 무신사 (MUSINSA Co., Ltd.) | 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 무신사캠퍼스 엔1) | 사업자등록번호 : 211-88-79575 |
+                통신판매업신고 : 2022-서울성동-01952 | 대표 : 한문일 | 개인정보 보호책임자 : 정광은 | 호스팅사업자 : (주)무신사</p>
+        </div>
+        <p id="notice">일부 상품의 경우 주식회사 무신사는 통신판매의 당사자가 아닌 통신판매중개자로서 상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을
+            확인하시기 바랍니다.<br>당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
+    </div>
+</footer>
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<!--푸터 END -->
+
+</html>

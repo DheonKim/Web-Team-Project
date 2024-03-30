@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 목록</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/footer_style.css">
+    <link rel="stylesheet" href="css/board_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <style>
+        @font-face {
+            font-family: 'AppleSDGothicNeo';
+            font-weight: 600;
+            src: url("./font/AppleSDGothicNeoSB.woff2") format("woff2");
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<header>
+    <div class="header_main-container">
+        <div class="header_area1">
+            <div class="header_text_box1">
+                <ul>
+                    <li>고객서비스</li>
+                    <li>매거진</li>
+                    <li>매장찾기</li>
+                    <li>ººº</li>
+                </ul>
+            </div>
+            <div class="header_logo">
+                <a href="../main/frontend_project/main.html"><img src="./img/logo.jpg"
+                                                                  style="width: 230px; height:180px;" alt="header_logo"></a>
+            </div>
+            <div class="header_text_box2">
+                <ul>
+                    <li>장바구니(0)</li>
+                    <li>즐겨찾기</li>
+                    <li><a href="../login_page/login_page_final.html">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header_main-container2">
+        <div class="header_area2">
+            <div class="header_top10">
+                <button class="header_brand-button">브랜드 TOP 10</button>
+            </div>
+            <div class="header_category">
+                <ul>
+                    <li>Man</li>
+                    <li>Woman</li>
+                    <li>Style</li>
+                    <li><a href="board_page.html">Community</a></li>
+                    <li>Special</li>
+                    <li>Magazine</li>
+                </ul>
+            </div>
+            <div class="header_search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="제품 검색">
+            </div>
+        </div>
+    </div>
+</header>
+<div>
+    <br>
+</div>
+
+<body>
+
+<div class="center_wrap">
+    <!-- 게시판 종류, 게시판 영역, 페이지 영역, 검색바 영역을 감싸는 div 태그 -->
+    <div class="board_list_wrap">
+        <!-- 게시판 종류 -->
+        <h1 class="category"><a href="#">자유 게시판</a></h1>
+        <!-- 게시판(테이블) 영역 START -->
+        <table class="board_list">
+            <caption>게시판 목록</caption>
+            <thead>
+            <!-- 테이블 헤더 START -->
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>작성일</th>
+                <th>추천</th>
+                <th>조회</th>
+            </tr>
+            <!-- 테이블 헤더 END -->
+            </thead>
+            <tbody>
+            <!-- 테이블 내용 START -->
+            <tr>
+                <td>10</td>
+                <td><a href="board_content.html">[해외발매] [Imran Potato x Vans] Nu Skool MTE-1</a></td>
+                <td>랄롱</td>
+                <td>2024.03.26</td>
+                <td>15</td>
+                <td>303</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="#">엘무드 오착</a></td>
+                <td>리즈</td>
+                <td>2024.03.26</td>
+                <td>15</td>
+                <td>309</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="#">SBS 코리아</a>
+                </td>
+                <td>관리자</td>
+                <td>2024.03.26</td>
+                <td>30</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="#">코딩은 랄튜브</a></td>
+                <td>관리자</td>
+                <td>2024.03.25</td>
+                <td>40</td>
+                <td>1034</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="#">닭 8천만 마리로 전투기를 구매한 나라</a></td>
+                <td>관리자</td>
+                <td>2024.03.25</td>
+                <td>30</td>
+                <td>503</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="#">파묘 감독이 사운드에서 아쉬워했던 것</a></td>
+                <td>관리자</td>
+                <td>2024.03.24</td>
+                <td>3</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#">영어의 속기사용 키보드를 알아보자</a></td>
+                <td>관리자</td>
+                <td>2024.03.23</td>
+                <td>9</td>
+                <td>1023</td>
+            </tr>
+            </tbody>
+            <!-- 테이블 내용 END -->
+        </table>
+        <!-- 게시판(테이블) 영역 END -->
+        <!-- 페이지 영역 START -->
+        <div class="paging">
+            <img src="img/paging_icon/left_page.png" alt="이전 페이지"/>
+            <a href="#" class="num on">1</a>
+            <a href="#" class="num">2</a>
+            <a href="#" class="num">3</a>
+            <img src="img/paging_icon/right_page.png" alt="다음 페이지"/>
+        </div>
+        <!-- 페이지 영역 END -->
+        <!-- 검색바와 글쓰기, 인기글 영역 START -->
+        <div class="bottom_bar">
+            <!-- 검색바 START -->
+            <div class="search_bar">
+                <div class="search_field_container">
+                    <label>
+                        <input type="text" placeholder="  검색어를 입력하세요." class="search_input">
+                    </label>
+                    <span class="search_icon"></span>
+                </div>
+            </div>
+            <!-- 검색바 END -->
+
+            <!-- 인기글, 글쓰기 START -->
+            <div class="buttons">
+                <!-- 인기글 페이지로 이동하는 링크 -->
+                <a href="#" class="button">인기글</a>
+                <!-- 글쓰기 페이지로 이동하는 링크 -->
+                <a href="../writing/writing_page.html" class="button">글쓰기</a>
+            </div>
+            <!-- 인기글, 글쓰기 END -->
+        </div>
+        <!-- 검색바와 글쓰기, 인기글 END -->
+    </div>
+</div>
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<!-- 푸터 START -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <ul class="footer-links">
+                <li><a href="#" class="footer-btn">회사소개</a></li>
+                <li><a href="#" class="footer-btn">인재채용</a></li>
+                <li><a href="#" class="footer-btn">제휴제안</a></li>
+                <li><a href="#" class="footer-btn">이용약관</a></li>
+                <li><a href="#" class="footer-btn">개인정보처리방침</a></li>
+            </ul>
+        </div>
+        <p class="copyright"><strong>COPYRIGHT (C) MUSINSA ALL RIGHTS RESERVED.</strong></p>
+        <p>무신사닷컴 내 매거진, 스트리트스냅, 스토어 등 무신사 자체 생성 콘텐츠는 무신사닷컴 및 무신사 계약업체에 저작권이 있습니다.<br> 이러한 콘텐츠는 출처를 밝히고 비상업적인 용도에서만 활용하실
+            수 있습니다.</p>
+        <p>커뮤니티 및 중고장터, 댓글 등 무신사 회원이 올린 이미지가 저작권에 위배될 경우 신고하시면 검토 후 삭제하겠습니다.</p>
+        <p>10 0% AUTHENTIC: 무신사스토어에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.</p>
+        <div class="footer-address">
+            <p>주식회사 무신사 (MUSINSA Co., Ltd.) | 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 무신사캠퍼스 엔1) | 사업자등록번호 : 211-88-79575 |
+                통신판매업신고 : 2022-서울성동-01952 | 대표 : 한문일 | 개인정보 보호책임자 : 정광은 | 호스팅사업자 : (주)무신사</p>
+        </div>
+        <p id="notice">일부 상품의 경우 주식회사 무신사는 통신판매의 당사자가 아닌 통신판매중개자로서 상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을
+            확인하시기 바랍니다.<br>당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
+    </div>
+</footer>
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<!--푸터 END -->
+
+</body>
+</html>
