@@ -7,6 +7,9 @@
     padding-top: 25px; /* 상단 내부 여백 추가 */
     font-family:  'Noto Sans KR', sans-serif; /* 글꼴 설정 */
 }
+.container{
+    margin-top: 30px;
+}
 
 .main_contantsHeader { /* 메인 콘텐츠 헤더 스타일 */
     /* background: #f06; */
