@@ -8,7 +8,7 @@ header {
     color : white;
     margin: 0 auto;
     padding: 0;
-    width: 1900px;
+    width: 100%;
 }
 .header_main-container {
     width: 1700px;
@@ -46,18 +46,19 @@ ul {
     display: inline-block;
     float: left;
     margin: 10px;
-    margin-left: 25px;
+    margin-left: 10px;
+    margin-right: 25px;
     margin-top: 30px;
 }
 .header_area1 {
     height: 50px;
-    width: 1700px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
 .header_area2 {
     height: 80px;
-    width: 1700px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -111,8 +112,13 @@ ul {
     width: 780px;
     height: 80px;
     text-align: center;
-    margin-right: auto;
 }
+.header_category > ul{
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin-left: 42px;
+ }
 .header_search {
     width: 460px;
     height: 80px;
