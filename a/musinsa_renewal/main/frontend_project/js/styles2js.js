@@ -1,7 +1,7 @@
 // timer 자바 스크립트 //
 
 // 목표 날짜 설정
-const countDownDate = new Date("Apr 2, 2024 00:00:00").getTime();
+const countDownDate = new Date("Apr 7, 2024 00:00:00").getTime();
 
 // 1초마다 카운트다운 업데이트
 const countdownfunction = setInterval(function() {
