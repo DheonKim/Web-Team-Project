@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/footer_style.css">
     <link rel="stylesheet" href="css/board_content.css">
-    <!-- 참고 : https://cafe.naver.com/sssw -->
-    <!-- 게시글 내용 페이지 -->
     <style>
         @font-face {
             font-family: 'AppleSDGothicNeo';
@@ -19,15 +17,6 @@
 
         body {
             background-color: #f8f9fa;
-        }
-
-        body > .center_wrap,
-        body > footer {
-            box-sizing: border-box;
-            /* padding과 border가 width에 포함되도록 설정 */
-            max-width: 1000px;
-            width: 100%;
-            margin: 0 auto;
         }
     </style>
 </head>
@@ -108,8 +97,19 @@
         <!-- 게시판 글 내용 START -->
         <div class="article_content">
             <p><br>
-                2024.04.03 WorldWide<br><br>
-                글내용~~
+                회사에서도 신고 다닐 정도로 만족하고 있어요 < br>
+
+                날이 따뜻해지면 못 신겠지만 겨울, 초봄까지는 <br>
+
+                잘 신고 다닐 예제! <br>
+
+                그러니 반스님! <br>
+
+                비슷한 디자인에 기모 없는걸로 안될까요 ?? <br>
+
+                만약 그런 반스 신발을 알고 계신 잇님이라면 <br>
+
+                댓글로 알려주시면 감사하 겠습니다!. <br>
                 <img src="img/IMG_6967.jpg" height="803" width="828" alt="나이키 신발1"/>
                 <img src="img/IMG_6971.jpg" height="782" width="828" alt="나이키 신발2"/></p>
             <!-- 좋아요, 공유하기 영역 START -->
@@ -140,6 +140,9 @@
             <div class="comment_content">정보 감사합니다
                 캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐~
             </div>
+            <div class="reply_reply">
+                <button class="reply_reply_button"><a href="#">답글</a></button>
+            </div>
         </div>
     </div>
     <div class="comment">
@@ -148,6 +151,9 @@
             <div class="nick">해상수</div>
             <div class="comment_content">정보 감사합니다
                 뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐뤼캐~
+            </div>
+            <div class="reply_reply">
+                <button class="reply_reply_button"><a href="#">답글</a></button>
             </div>
         </div>
     </div>
@@ -159,6 +165,9 @@
                 Lorem ipsum dolor sit amet Et voluptua vero. Illum tempor eros.<br> Eirmod rebum accusam takimata iriure
                 clita voluptua facilisis feugait elitr
             </div>
+            <div class="reply_reply">
+                <button class="reply_reply_button"><a href="#">답글</a></button>
+            </div>
         </div>
     </div>
     <!-- comment 쓰기 기능 START -->
@@ -168,7 +177,7 @@
                 <div class="replyIdPw">
                     <label for="replyId">
                         <img class="comment_icon" src="img/comment/user_comment.png" alt="댓글 기본 프로필"/>
-                        <input type="text" class="replyId" placeholder="닉네임" id="replyId">
+                        <input type="text" class="replyId" placeholder="닉네임" id="replyId" >
                     </label>
                     <label for="replyPassword">
                         <img class="comment_icon" src="img/comment/lock.png" alt="lock"/>
@@ -176,7 +185,7 @@
                     </label>
                 </div>
                 <label for="commentContent">
-                    <textarea class="commentContent" id="commentContent" rows="3"></textarea>
+                    <textarea class="commentContent" id="commentContent" rows="3">내용 입력</textarea>
                 </label>
                 <button type="button" class="replyButton">쓰기</button>
             </li>
