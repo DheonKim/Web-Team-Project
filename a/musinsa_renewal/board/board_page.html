@@ -18,8 +18,19 @@
         body {
             background-color: #f8f9fa;
         }
+
+        body > .center_wrap,
+        body > footer {
+            box-sizing: border-box;
+            /* padding과 border가 width에 포함되도록 설정 */
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
     </style>
 </head>
+
+<body>
 <header>
     <div class="header_main-container">
         <div class="header_area1">
@@ -69,8 +80,6 @@
 <div>
     <br>
 </div>
-
-<body>
 
 <div class="center_wrap">
     <!-- 게시판 종류, 게시판 영역, 페이지 영역, 검색바 영역을 감싸는 div 태그 -->

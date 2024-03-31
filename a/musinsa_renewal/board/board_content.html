@@ -16,13 +16,25 @@
             font-weight: 600;
             src: url("./font/AppleSDGothicNeoSB.woff2") format("woff2");
         }
+
         body {
             background-color: #f8f9fa;
         }
+
+        body > .center_wrap,
+        body > footer {
+            box-sizing: border-box;
+            /* padding과 border가 width에 포함되도록 설정 */
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
     </style>
 </head>
+<body>
+
 <header>
-    <div class="header_main-container" >
+    <div class="header_main-container">
         <div class="header_area1">
             <div class="header_text_box1">
                 <ul>
@@ -33,7 +45,8 @@
                 </ul>
             </div>
             <div class="header_logo">
-                <a href="../main/frontend_project/main.html"><img src="./img/logo.jpg" style="width: 230px; height:180px;"></a>
+                <a href="../main/frontend_project/main.html"><img src="./img/logo.jpg"
+                                                                  style="width: 230px; height:180px;" alt=""></a>
             </div>
             <div class="header_text_box2">
                 <ul>
@@ -54,14 +67,18 @@
                     <li>Man</li>
                     <li>Woman</li>
                     <li>Style</li>
-                    <a href="../board/board_page.html"><li>Community</li></a>
+                    <a href="../board/board_page.html">
+                        <li>Community</li>
+                    </a>
                     <li>Special</li>
                     <li>Magazine</li>
                 </ul>
             </div>
             <div class="header_search">
                 <button type="submit"><i class="fas fa-search"></i></button>
-                <input type="text" placeholder="제품 검색">
+                <label>
+                    <input type="text" placeholder="제품 검색">
+                </label>
             </div>
         </div>
     </div>
@@ -71,7 +88,6 @@
     <br>
 </div>
 
-<body>
 <div class="center_wrap"> <!-- 중앙 정렬을 위한 외부 컨테이너 -->
 
     <!-- 게시글 내용을 담을 컨테이너 START -->
