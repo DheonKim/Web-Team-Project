@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>로그인 정보</title>
+    <title>회원가입 정보</title>
     <style>
         table {
             width: 500px;
@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-<h2>로그인 정보</h2>
+<h2>회원가입 정보</h2>
 <table>
     <tr>
         <th>항목</th>
@@ -34,6 +34,10 @@
     <tr>
         <td>비밀번호</td>
         <td><?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?></td>
+    </tr>
+    <tr>
+        <td>이메일</td>
+        <td><?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?></td>
     </tr>
 </table>
 </body>
