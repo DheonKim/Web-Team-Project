@@ -208,9 +208,12 @@ div.comment_content {
 .commentContent {
     width: 75%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
     resize: none; /* 사용자가 크기를 조정하지 못하게 함 */
+    color: #8c8c8c;
+
+
 }
 
 .replyButton {
@@ -247,6 +250,7 @@ div.comment_content {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: #8c8c8c;
     /* 나머지 스타일은 동일하게 유지 */
 }
 
