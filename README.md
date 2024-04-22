@@ -3,6 +3,24 @@ Korea IT Academy에서 진행했던 웹사이트 리뉴얼 프로젝트에 대�
 
 저희 팀은 **무신사** 사이트를 리뉴얼 하였습니다.
 
+## 목차
+### 프로젝트 담당 역할
+### 웹 사이트 선정
+ - 무신사 소개
+ - 제작의도 및 목적
+
+### 웹 사이트 분석
+ - 현재 사이트 분석
+ - 경쟁사 사이트 분석
+ - 운영 목적 파악
+ - 요구사항과 개선사항
+
+### 웹사이트 리뉴얼
+ - 와이어 프레임
+ - 유스케이스
+ - 개선요소
+ - FTP INPUT
+
 ![무신사_팀프로젝트_담당역할페이지_compressed_pages-to-jpg-0001](https://github.com/JeongMoJin/web-team-project/assets/121412089/e5e1cb5a-37c1-4deb-a38d-c966737f8547)
 ![무신사_팀프로젝트_담당역할페이지_compressed_pages-to-jpg-0002](https://github.com/JeongMoJin/web-team-project/assets/121412089/c01aa241-f26d-4ddb-b3da-ebf9251e4882)
 ![무신사_팀프로젝트_담당역할페이지_compressed_pages-to-jpg-0003](https://github.com/JeongMoJin/web-team-project/assets/121412089/f0b36640-d1b3-4547-b80b-44458ef12dd1)
